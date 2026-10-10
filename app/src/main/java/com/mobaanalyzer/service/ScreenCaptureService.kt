@@ -26,6 +26,7 @@ import com.mobaanalyzer.MainActivity
 import com.mobaanalyzer.R
 import com.mobaanalyzer.data.AppState
 import com.mobaanalyzer.data.HeroDatabase
+import com.mobaanalyzer.data.HeroDatabaseUpdater
 import com.mobaanalyzer.data.HeroIconCache
 import com.mobaanalyzer.engine.NormRect
 import com.mobaanalyzer.engine.ScreenReading
