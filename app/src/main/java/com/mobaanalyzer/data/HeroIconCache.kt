@@ -155,15 +155,35 @@ object HeroIconCache {
         return if (f.exists() && f.length() > 0) BitmapFactory.decodeFile(f.absolutePath) else null
     }
 
-    /** โหลด URL map จาก assets/hero_icons.json */
+    // GitHub Releases URL — เปลี่ยนเป็น repo ของตัวเอง
+    private const val ICONS_RELEASE_URL =
+        "https://github.com/tanakorn1680/Raov-guide/releases/latest/download/hero_icons.json"
+
+    /** โหลด URL map — ลองดึงจาก GitHub Releases ก่อน fallback ไป assets */
     private fun loadUrlMap(context: Context): Map<String, String> {
+        // ลองดึงจาก release ล่าสุด
+        val remoteText = try {
+            val conn = (URL(ICONS_RELEASE_URL).openConnection() as java.net.HttpURLConnection).apply {
+                connectTimeout = 6_000; readTimeout = 8_000
+                setRequestProperty("User-Agent", "RaovGuide-App")
+            }
+            if (conn.responseCode == 200) conn.inputStream.bufferedReader().use { it.readText() }
+            else null
+        } catch (e: Exception) { null }
+
+        val text = remoteText ?: try {
+            // fallback → assets ที่ bundle มาใน APK
+            context.assets.open("hero_icons.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+        } catch (e: Exception) {
+            Log.w(TAG, "hero_icons.json โหลดไม่ได้เลย: ${e.message}")
+            return emptyMap()
+        }
+
         return try {
-            val text = context.assets.open("hero_icons.json")
-                .bufferedReader(Charsets.UTF_8).use { it.readText() }
             val heroes = JSONObject(text).getJSONObject("heroes")
             buildMap { for (key in heroes.keys()) heroes.getJSONObject(key).optString("icon_url").takeIf { it.isNotEmpty() }?.let { put(key, it) } }
         } catch (e: Exception) {
-            Log.w(TAG, "hero_icons.json โหลดไม่ได้: ${e.message}")
+            Log.w(TAG, "parse hero_icons.json ไม่ได้: ${e.message}")
             emptyMap()
         }
     }
