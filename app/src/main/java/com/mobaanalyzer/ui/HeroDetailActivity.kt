@@ -2,25 +2,16 @@ package com.mobaanalyzer.ui
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.mobaanalyzer.R
-import com.mobaanalyzer.data.AppState
-import com.mobaanalyzer.data.Hero
-import com.mobaanalyzer.data.HeroDatabase
-import com.mobaanalyzer.data.HeroIconCache
-import com.mobaanalyzer.data.Role
+import com.mobaanalyzer.data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -36,32 +27,6 @@ class HeroDetailActivity : AppCompatActivity() {
 
     private lateinit var hero: Hero
 
-    private lateinit var ivIcon: ImageView
-    private lateinit var tvName: TextView
-    private lateinit var tvTier: TextView
-    private lateinit var tvRole: TextView
-    private lateinit var tvTags: TextView
-    private lateinit var rowStats: View
-    private lateinit var tvWin: TextView
-    private lateinit var tvPick: TextView
-    private lateinit var tvBan: TextView
-    private lateinit var sectionCounters: View
-    private lateinit var tvCounters: TextView
-    private lateinit var sectionWeakTo: View
-    private lateinit var tvWeakTo: TextView
-    private lateinit var panelChangeIcon: View
-    private lateinit var etIconUrl: EditText
-    private lateinit var btnPickFromGallery: Button
-    private lateinit var btnSaveIcon: Button
-    private lateinit var btnResetIcon: Button
-    private lateinit var btnChangeIcon: TextView
-
-    private val tierColor = mapOf(
-        "S+" to 0xFFFF4444.toInt(), "S" to 0xFFFF8844.toInt(),
-        "A"  to 0xFFFFDD44.toInt(), "B" to 0xFF88DD44.toInt(),
-        "C"  to 0xFF44AAFF.toInt(), "D" to 0xFF888888.toInt()
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hero_detail)
@@ -69,67 +34,27 @@ class HeroDetailActivity : AppCompatActivity() {
         val heroId = intent.getStringExtra(EXTRA_HERO_ID) ?: run { finish(); return }
         val db = AppState.heroDb ?: HeroDatabase.load(this)
         hero = db.heroes.find { it.id == heroId } ?: run { finish(); return }
-
         HeroIconCache.initIfNeeded(applicationContext, db.heroes.map { it.id }.toSet())
 
-        bindViews()
-        populateHero()
+        populateHeader()
+        populatePatch()
+        populateStats()
+        populateStrengths()
+        populateWeaknesses()
+        populateMatchups(db)
+        populateSkills()
+        setupChangeIcon()
         loadIcon()
     }
 
-    private fun bindViews() {
-        ivIcon           = findViewById(R.id.ivDetailIcon)
-        tvName           = findViewById(R.id.tvDetailName)
-        tvTier           = findViewById(R.id.tvDetailTier)
-        tvRole           = findViewById(R.id.tvDetailRole)
-        tvTags           = findViewById(R.id.tvDetailTags)
-        rowStats         = findViewById(R.id.rowStats)
-        tvWin            = findViewById(R.id.tvWin)
-        tvPick           = findViewById(R.id.tvPick)
-        tvBan            = findViewById(R.id.tvBan)
-        sectionCounters  = findViewById(R.id.sectionCounters)
-        tvCounters       = findViewById(R.id.tvCounters)
-        sectionWeakTo    = findViewById(R.id.sectionWeakTo)
-        tvWeakTo         = findViewById(R.id.tvWeakTo)
-        panelChangeIcon  = findViewById(R.id.panelChangeIcon)
-        etIconUrl        = findViewById(R.id.etIconUrl)
-        btnPickFromGallery = findViewById(R.id.btnPickFromGallery)
-        btnSaveIcon      = findViewById(R.id.btnSaveIcon)
-        btnResetIcon     = findViewById(R.id.btnResetIcon)
-        btnChangeIcon    = findViewById(R.id.btnChangeIcon)
+    // ── Header ────────────────────────────────────────────────────────────────
 
-        btnChangeIcon.setOnClickListener {
-            panelChangeIcon.visibility =
-                if (panelChangeIcon.visibility == View.GONE) View.VISIBLE else View.GONE
-        }
-
-        btnPickFromGallery.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK).apply { type = "image/*" }
-            startActivityForResult(intent, PICK_IMAGE)
-        }
-
-        btnSaveIcon.setOnClickListener { saveIconFromUrl() }
-
-        btnResetIcon.setOnClickListener {
-            HeroIconCache.clearCustomIcon(hero.id)
-            loadIcon()
-            panelChangeIcon.visibility = View.GONE
-            Toast.makeText(this, "รีเซ็ต icon แล้ว", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun populateHero() {
-        supportActionBar?.title = hero.name
-        tvName.text = hero.name
-
-        if (hero.tier != null) {
-            tvTier.text = hero.tier
-            tvTier.setTextColor(tierColor[hero.tier] ?: 0xFF888888.toInt())
-            tvTier.visibility = View.VISIBLE
-        } else {
-            tvTier.visibility = View.GONE
-        }
-
+    private fun populateHeader() {
+        val tierColor = mapOf(
+            "S+" to 0xFFFF4444.toInt(), "S" to 0xFFFF8844.toInt(),
+            "A"  to 0xFFFFDD44.toInt(), "B" to 0xFF88DD44.toInt(),
+            "C"  to 0xFF44AAFF.toInt(), "D" to 0xFF888888.toInt()
+        )
         val laneLabel = mapOf(
             "JUNGLE" to "ป่า", "MID" to "กลาง",
             "ABYSSAL" to "ล่าง", "DARK_SLAYER" to "บน"
@@ -141,39 +66,190 @@ class HeroDetailActivity : AppCompatActivity() {
             else -> hero.role.name
         }
         val lanes = hero.lanes.mapNotNull { laneLabel[it] }.joinToString(" / ")
-        tvRole.text = if (lanes.isNotEmpty()) "$roleLabel · $lanes" else roleLabel
-        tvTags.text = hero.tags.joinToString(" · ")
 
-        // counters
-        if (hero.counters.isNotEmpty()) {
-            val db = AppState.heroDb ?: HeroDatabase.load(this)
-            tvCounters.text = hero.counters
-                .mapNotNull { id -> db.heroes.find { it.id == id }?.name ?: id }
-                .joinToString("  ·  ")
-            sectionCounters.visibility = View.VISIBLE
+        findViewById<TextView>(R.id.tvDetailName).text = hero.name
+        findViewById<TextView>(R.id.tvDetailRole).text =
+            if (lanes.isNotEmpty()) "$roleLabel · $lanes" else roleLabel
+        findViewById<TextView>(R.id.tvDetailTags).text = hero.tags.joinToString(" · ")
+
+        val tvTier = findViewById<TextView>(R.id.tvDetailTier)
+        if (hero.tier != null) {
+            tvTier.text = hero.tier
+            tvTier.setTextColor(tierColor[hero.tier] ?: 0xFF888888.toInt())
+            tvTier.visibility = View.VISIBLE
+        } else tvTier.visibility = View.GONE
+    }
+
+    // ── Patch ─────────────────────────────────────────────────────────────────
+
+    private fun populatePatch() {
+        if (hero.patchStatus == null && hero.patchChanges.isEmpty()) return
+
+        val rowPatch = findViewById<View>(R.id.rowPatch)
+        rowPatch.visibility = View.VISIBLE
+
+        val statusColor = mapOf(
+            "Buffed" to 0xFF4ADE80.toInt(),
+            "Nerfed" to 0xFFF87171.toInt(),
+            "Adjusted" to 0xFFFACC15.toInt(),
+            "New" to 0xFF60A5FA.toInt(),
+            "Reworked" to 0xFFE879F9.toInt()
+        )
+        val tvStatus = findViewById<TextView>(R.id.tvPatchStatus)
+        if (hero.patchStatus != null) {
+            tvStatus.text = hero.patchStatus
+            tvStatus.setTextColor(statusColor[hero.patchStatus] ?: 0xFFFFFFFF.toInt())
+            tvStatus.visibility = View.VISIBLE
+        }
+        if (hero.patchVersion != null) {
+            val tvVer = findViewById<TextView>(R.id.tvPatchVersion)
+            tvVer.text = "Patch ${hero.patchVersion}"
+            tvVer.visibility = View.VISIBLE
         }
 
-        if (hero.weakTo.isNotEmpty()) {
-            val db = AppState.heroDb ?: HeroDatabase.load(this)
-            tvWeakTo.text = hero.weakTo
-                .mapNotNull { id -> db.heroes.find { it.id == id }?.name ?: id }
+        if (hero.patchChanges.isNotEmpty()) {
+            val sectionPatch = findViewById<View>(R.id.sectionPatch)
+            sectionPatch.visibility = View.VISIBLE
+            val tvChanges = findViewById<TextView>(R.id.tvPatchChanges)
+            tvChanges.text = hero.patchChanges.joinToString("\n") { "• $it" }
+        }
+    }
+
+    // ── Pro stats ─────────────────────────────────────────────────────────────
+
+    private fun populateStats() {
+        if (hero.proWinRate == null && hero.proPickRate == null && hero.proBanRate == null) return
+        val rowStats = findViewById<View>(R.id.rowStats)
+        rowStats.visibility = View.VISIBLE
+        hero.proWinRate?.let { findViewById<TextView>(R.id.tvWin).text = "%.1f%%".format(it) }
+        hero.proPickRate?.let { findViewById<TextView>(R.id.tvPick).text = "%.1f%%".format(it) }
+        hero.proBanRate?.let { findViewById<TextView>(R.id.tvBan).text = "%.1f%%".format(it) }
+    }
+
+    // ── Strengths / Weaknesses ────────────────────────────────────────────────
+
+    private fun populateStrengths() {
+        if (hero.strengths.isEmpty()) return
+        val sec = findViewById<View>(R.id.sectionStrengths)
+        sec.visibility = View.VISIBLE
+        findViewById<TextView>(R.id.tvStrengths).text =
+            hero.strengths.joinToString("\n") { "✓  $it" }
+    }
+
+    private fun populateWeaknesses() {
+        if (hero.weaknesses.isEmpty()) return
+        val sec = findViewById<View>(R.id.sectionWeaknesses)
+        sec.visibility = View.VISIBLE
+        findViewById<TextView>(R.id.tvWeaknesses).text =
+            hero.weaknesses.joinToString("\n") { "✕  $it" }
+    }
+
+    // ── Matchups ──────────────────────────────────────────────────────────────
+
+    private fun populateMatchups(db: HeroDatabase) {
+        fun resolveNames(ids: Set<String>) =
+            ids.mapNotNull { id -> db.heroes.find { it.id == id }?.name ?: id.ifBlank { null } }
                 .joinToString("  ·  ")
-            sectionWeakTo.visibility = View.VISIBLE
+
+        if (hero.counters.isNotEmpty()) {
+            findViewById<View>(R.id.sectionCounters).visibility = View.VISIBLE
+            findViewById<TextView>(R.id.tvCounters).text = resolveNames(hero.counters)
+        }
+        if (hero.weakTo.isNotEmpty()) {
+            findViewById<View>(R.id.sectionWeakTo).visibility = View.VISIBLE
+            findViewById<TextView>(R.id.tvWeakTo).text = resolveNames(hero.weakTo)
+        }
+        if (hero.synergies.isNotEmpty()) {
+            findViewById<View>(R.id.sectionSynergies).visibility = View.VISIBLE
+            findViewById<TextView>(R.id.tvSynergies).text = resolveNames(hero.synergies)
+        }
+    }
+
+    // ── Skills ────────────────────────────────────────────────────────────────
+
+    private fun populateSkills() {
+        if (hero.skills.isEmpty()) return
+        val secSkills = findViewById<View>(R.id.sectionSkills)
+        secSkills.visibility = View.VISIBLE
+        val container = findViewById<LinearLayout>(R.id.skillContainer)
+        container.removeAllViews()
+
+        val slotLabel = mapOf(
+            "passive" to "P", "skill1" to "1",
+            "skill2" to "2", "skill3" to "3", "ultimate" to "ULT"
+        )
+
+        for (skill in hero.skills) {
+            val row = LinearLayout(this).apply {
+                orientation = LinearLayout.VERTICAL
+                setPadding(0, 0, 0, dp(12))
+            }
+            val nameRow = LinearLayout(this).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = android.view.Gravity.CENTER_VERTICAL
+            }
+            val badge = TextView(this).apply {
+                text = slotLabel[skill.slot] ?: skill.slot.uppercase()
+                textSize = 10f
+                setTextColor(0xFF60A5FA.toInt())
+                setPadding(dp(6), dp(2), dp(6), dp(2))
+                background = resources.getDrawable(R.drawable.bg_chip, null)
+            }
+            val skillName = TextView(this).apply {
+                text = skill.name
+                textSize = 14f
+                setTextColor(0xFFFFFFFF.toInt())
+                typeface = android.graphics.Typeface.DEFAULT_BOLD
+                setPadding(dp(8), 0, 0, 0)
+            }
+            nameRow.addView(badge)
+            nameRow.addView(skillName)
+            row.addView(nameRow)
+
+            if (skill.desc.isNotEmpty()) {
+                val desc = TextView(this).apply {
+                    text = skill.desc
+                    textSize = 12f
+                    setTextColor(0xFF999999.toInt())
+                    setPadding(0, dp(4), 0, 0)
+                    lineSpacingMultiplier = 1.4f
+                }
+                row.addView(desc)
+            }
+            container.addView(row)
+        }
+    }
+
+    // ── Change icon ───────────────────────────────────────────────────────────
+
+    private fun setupChangeIcon() {
+        val panelChangeIcon = findViewById<View>(R.id.panelChangeIcon)
+        findViewById<TextView>(R.id.btnChangeIcon).setOnClickListener {
+            panelChangeIcon.visibility =
+                if (panelChangeIcon.visibility == View.GONE) View.VISIBLE else View.GONE
+        }
+        findViewById<Button>(R.id.btnPickFromGallery).setOnClickListener {
+            startActivityForResult(Intent(Intent.ACTION_PICK).apply { type = "image/*" }, PICK_IMAGE)
+        }
+        findViewById<Button>(R.id.btnSaveIcon).setOnClickListener { saveIconFromUrl() }
+        findViewById<Button>(R.id.btnResetIcon).setOnClickListener {
+            HeroIconCache.clearCustomIcon(hero.id)
+            loadIcon()
+            panelChangeIcon.visibility = View.GONE
+            Toast.makeText(this, "รีเซ็ต icon แล้ว", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun loadIcon() {
+        val ivIcon = findViewById<ImageView>(R.id.ivDetailIcon)
+        ivIcon.setImageDrawable(null)
         lifecycleScope.launch {
-            val bmp = HeroIconCache.getIcon(hero.id)
-            if (bmp != null) ivIcon.setImageBitmap(bmp)
-            else ivIcon.setImageResource(android.R.drawable.ic_menu_gallery)
+            HeroIconCache.getIcon(hero.id)?.let { ivIcon.setImageBitmap(it) }
         }
     }
 
-    // ── เปลี่ยน icon ─────────────────────────────────────────────────────────
-
     private fun saveIconFromUrl() {
-        val url = etIconUrl.text.toString().trim()
+        val url = findViewById<EditText>(R.id.etIconUrl).text.toString().trim()
         if (url.isEmpty()) { Toast.makeText(this, "กรอก URL ก่อน", Toast.LENGTH_SHORT).show(); return }
         lifecycleScope.launch(Dispatchers.IO) {
             try {
@@ -183,14 +259,12 @@ class HeroDetailActivity : AppCompatActivity() {
                 if (bmp != null) {
                     HeroIconCache.saveCustomIcon(hero.id, bmp)
                     withContext(Dispatchers.Main) {
-                        ivIcon.setImageBitmap(bmp)
-                        panelChangeIcon.visibility = View.GONE
+                        findViewById<ImageView>(R.id.ivDetailIcon).setImageBitmap(bmp)
+                        findViewById<View>(R.id.panelChangeIcon).visibility = View.GONE
                         Toast.makeText(this@HeroDetailActivity, "บันทึก icon แล้ว", Toast.LENGTH_SHORT).show()
                     }
-                } else {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@HeroDetailActivity, "โหลดรูปไม่ได้", Toast.LENGTH_SHORT).show()
-                    }
+                } else withContext(Dispatchers.Main) {
+                    Toast.makeText(this@HeroDetailActivity, "โหลดรูปไม่ได้", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
@@ -206,13 +280,12 @@ class HeroDetailActivity : AppCompatActivity() {
             val uri: Uri = data?.data ?: return
             lifecycleScope.launch(Dispatchers.IO) {
                 try {
-                    val stream = contentResolver.openInputStream(uri) ?: return@launch
-                    val bmp = BitmapFactory.decodeStream(stream)
+                    val bmp = contentResolver.openInputStream(uri)?.use { BitmapFactory.decodeStream(it) }
                     if (bmp != null) {
                         HeroIconCache.saveCustomIcon(hero.id, bmp)
                         withContext(Dispatchers.Main) {
-                            ivIcon.setImageBitmap(bmp)
-                            panelChangeIcon.visibility = View.GONE
+                            findViewById<ImageView>(R.id.ivDetailIcon).setImageBitmap(bmp)
+                            findViewById<View>(R.id.panelChangeIcon).visibility = View.GONE
                             Toast.makeText(this@HeroDetailActivity, "บันทึก icon แล้ว", Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -224,4 +297,6 @@ class HeroDetailActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun dp(v: Int) = (v * resources.displayMetrics.density).toInt()
 }
