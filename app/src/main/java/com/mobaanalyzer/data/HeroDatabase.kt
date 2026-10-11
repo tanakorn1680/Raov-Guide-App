@@ -1,10 +1,17 @@
 package com.mobaanalyzer.data
 
 import android.content.Context
+import org.json.JSONArray
 import org.json.JSONObject
 
 enum class Role { TANK, FIGHTER, ASSASSIN, MAGE, CARRY, SUPPORT, UNKNOWN }
 enum class DamageType { PHYSICAL, MAGIC, MIXED }
+
+data class Skill(
+    val slot: String,
+    val name: String,
+    val desc: String
+)
 
 data class Hero(
     val id: String,
@@ -16,22 +23,28 @@ data class Hero(
     val tags: Set<String>,
     val counters: Set<String> = emptySet(),
     val weakTo: Set<String> = emptySet(),
-    val tier: String? = null
+    val synergies: Set<String> = emptySet(),
+    val tier: String? = null,
+    val patchStatus: String? = null,
+    val patchVersion: String? = null,
+    val patchChanges: List<String> = emptyList(),
+    val strengths: List<String> = emptyList(),
+    val weaknesses: List<String> = emptyList(),
+    val skills: List<Skill> = emptyList(),
+    val proWinRate: Double? = null,
+    val proPickRate: Double? = null,
+    val proBanRate: Double? = null
 ) {
     fun has(tag: String): Boolean = tag in tags
-
-    /** false for name-only heroes whose role/tags are not filled in yet. */
     val hasData: Boolean get() = role != Role.UNKNOWN
 }
 
-/** Hero list loaded from assets/heroes.json + fuzzy matching for noisy OCR text. */
 class HeroDatabase(val heroes: List<Hero>) {
 
     private val index: List<Pair<String, Hero>> = heroes
         .flatMap { h -> (listOf(h.name) + h.aliases).map { normalize(it) to h } }
         .filter { it.first.length >= 3 }
 
-    /** Best hero for one OCR string, or null if nothing is close enough. */
     fun match(raw: String): Hero? {
         val q = normalize(raw)
         if (q.length < 3) return null
@@ -41,14 +54,12 @@ class HeroDatabase(val heroes: List<Hero>) {
             if (kotlin.math.abs(key.length - q.length) > 2) continue
             val d = editDistance(q, key)
             if (d <= allowedErrors(key.length) && d < bestDist) {
-                bestDist = d
-                best = hero
+                bestDist = d; best = hero
             }
         }
         return best
     }
 
-    /** Scan OCR lines (whole line, each word, and adjacent word pairs) and return distinct heroes. */
     fun findIn(lines: List<String>): List<Hero> {
         val found = LinkedHashSet<Hero>()
         for (line in lines) {
@@ -73,37 +84,37 @@ class HeroDatabase(val heroes: List<Hero>) {
             val list = ArrayList<Hero>()
             for (i in 0 until arr.length()) {
                 val o = arr.getJSONObject(i)
-                list.add(
-                    Hero(
-                        id = o.getString("id"),
-                        name = o.getString("name"),
-                        aliases = o.optJSONArray("aliases").toStrings(),
-                        role = Role.valueOf(o.optString("role", "UNKNOWN")),
-                        lanes = o.optJSONArray("lanes").toStrings(),
-                        damage = DamageType.valueOf(o.optString("damage", "MIXED")),
-                        tags = o.optJSONArray("tags").toStrings().toSet(),
-                        counters = o.optJSONArray("counters").toStrings().toSet(),
-                        weakTo = o.optJSONArray("weakTo").toStrings().toSet(),
-                        tier = o.optString("tier").takeIf { it.isNotEmpty() }
-                    )
-                )
+                list.add(Hero(
+                    id           = o.getString("id"),
+                    name         = o.getString("name"),
+                    aliases      = o.optJSONArray("aliases").toStrings(),
+                    role         = Role.valueOf(o.optString("role", "UNKNOWN")),
+                    lanes        = o.optJSONArray("lanes").toStrings(),
+                    damage       = DamageType.valueOf(o.optString("damage", "MIXED")),
+                    tags         = o.optJSONArray("tags").toStrings().toSet(),
+                    counters     = o.optJSONArray("counters").toStrings().toSet(),
+                    weakTo       = o.optJSONArray("weakTo").toStrings().toSet(),
+                    synergies    = o.optJSONArray("synergies").toStrings().toSet(),
+                    tier         = o.optString("tier").takeIf { it.isNotEmpty() },
+                    patchStatus  = o.optString("patchStatus").takeIf { it.isNotEmpty() },
+                    patchVersion = o.optString("patchVersion").takeIf { it.isNotEmpty() },
+                    patchChanges = o.optJSONArray("patchChanges").toStrings(),
+                    strengths    = o.optJSONArray("strengths").toStrings(),
+                    weaknesses   = o.optJSONArray("weaknesses").toStrings(),
+                    skills       = o.optJSONArray("skills").toSkills(),
+                    proWinRate   = if (o.has("proWinRate")) o.getDouble("proWinRate") else null,
+                    proPickRate  = if (o.has("proPickRate")) o.getDouble("proPickRate") else null,
+                    proBanRate   = if (o.has("proBanRate")) o.getDouble("proBanRate") else null
+                ))
             }
             return HeroDatabase(list)
         }
 
-        /** Lowercase, drop punctuation/spaces, and fold common OCR digit/letter mixups. */
         fun normalize(s: String): String {
             val sb = StringBuilder()
             for (ch in s.lowercase()) {
                 if (!ch.isLetterOrDigit()) continue
-                sb.append(
-                    when (ch) {
-                        '0' -> 'o'
-                        '1' -> 'l'
-                        '5' -> 's'
-                        else -> ch
-                    }
-                )
+                sb.append(when (ch) { '0' -> 'o'; '1' -> 'l'; '5' -> 's'; else -> ch })
             }
             return sb.toString()
         }
@@ -126,9 +137,19 @@ class HeroDatabase(val heroes: List<Hero>) {
     }
 }
 
-private fun org.json.JSONArray?.toStrings(): List<String> {
+private fun JSONArray?.toStrings(): List<String> {
     if (this == null) return emptyList()
-    val out = ArrayList<String>()
-    for (i in 0 until length()) out.add(getString(i))
-    return out
+    return (0 until length()).map { getString(it) }
+}
+
+private fun JSONArray?.toSkills(): List<Skill> {
+    if (this == null) return emptyList()
+    return (0 until length()).map {
+        val o = getJSONObject(it)
+        Skill(
+            slot = o.optString("slot"),
+            name = o.optString("name"),
+            desc = o.optString("desc")
+        )
+    }
 }
