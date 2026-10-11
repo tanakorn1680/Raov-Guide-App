@@ -212,7 +212,7 @@ class HeroDetailActivity : AppCompatActivity() {
                     textSize = 12f
                     setTextColor(0xFF999999.toInt())
                     setPadding(0, dp(4), 0, 0)
-                    lineSpacingMultiplier = 1.4f
+                    setLineSpacing(0f, 1.4f)
                 }
                 row.addView(desc)
             }
