@@ -91,8 +91,8 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Wicked Plot true damage raised from 55(+8*Hero Level) to 84(+6*Hero Level).",
-    "Matrix of Woe base damage changed from 125(+15/Lv) to 115(+23/Lv)."
+    "Wicked Plot true damage 55(+8*Hero Level)(+0.3MP) to 84(+6*Hero Level)(+0.3MP).",
+    "Matrix of Woe base damage 125(+15/Lv)(+0.3MP) to 115(+23/Lv)(+0.3MP)."
    ],
    "strengths": [
     "Wicked Plot เป็นทรูดาเมจ ข่มได้ทั้งแทงค์และตัวที่มีโล่",
@@ -308,7 +308,7 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Combo enhanced normal attack can dash forward when there is no target."
+    "Combo: enhanced normal attack now dashes forward when there is no target."
    ],
    "strengths": [
     "พาสซีฟ Duel ทำให้ทุกการโจมตีใส่เป้าที่อยู่โดดเดี่ยวมีดาเมจ 1.5x ตั้งแต่เลเวล 3",
@@ -811,9 +811,9 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Uninjured bonus damage raised from 10 to 28~56 (+1% Max HP).",
-    "Bounced cooldown reduced from 8 (-0.3/Lv) seconds to 7.5 (-0.3/Lv) seconds.",
-    "Rake Down impact damage per level raised from +15/Lv to +30/Lv."
+    "Uninjured bonus damage 10 (+1% Max HP) to 28~56 (+1% Max HP).",
+    "Bounced cooldown 8 (-0.3/Lv)s to 7.5 (-0.3/Lv)s.",
+    "Rake Down impact damage 150(+15/Lv)(+6% Max HP) to 150(+30/Lv)(+6% Max HP)."
    ],
    "strengths": [
     "Child of the Sea ให้ยืนระยะจริงในเทรดยาวโดยไม่ต้องกลับบ้าน",
@@ -1032,8 +1032,8 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Wild Stomp grants 2 stacks of damage reduction on activation.",
-    "Damage reduction changed from 6% (+0.5%/Lv) max 4 stacks to 4% (+0.8/Lv) max 5 stacks."
+    "Wild Stomp now grants 2 stacks of damage reduction on activation.",
+    "Damage reduction 6% (+0.5%/Lv), max 4 stacks to 4% (+0.8/Lv), max 5 stacks."
    ],
    "strengths": [
     "Wild Prison ฝัง AoE นาน 3 วินาที เป็นฮาร์ดซีซีที่ยาวสุดในเกม",
@@ -1162,7 +1162,7 @@
      "desc": "Sands of Time"
     }
    ],
-   "tier": "S",
+   "tier": "A",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -1233,7 +1233,7 @@
      "desc": "He unleashes a powerful sword strike in the designated direction, slowing enemies significantly for a moment, then dashes in a wide range, dealing massive physical damage.When in Sea Beast form, his ultimate move does not require a sword strike but automatically dashes forward, while reducing the cooldown of Water Dash. With the ability to cause large-scale pressure and high damage, this skill makes Billow an extremely formidable opponent in teamfights.With flexible mobility and powerful damage from his skill set, Billow promises to become a formidable Assassin on the battlefield."
     }
    ],
-   "tier": "S",
+   "tier": "S+",
    "proWinRate": 52.6,
    "proPickRate": 29.2,
    "proBanRate": 24.7
@@ -1533,9 +1533,9 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Redeploy doubles passive attack damage while active.",
-    "Redeploy acceleration time raised from 2 to 3.",
-    "Entrench cooldown reduced from 22 (-3/Lv) seconds to 20 (-2/Lv) seconds."
+    "Redeploy: passive attack damage doubled while active.",
+    "Redeploy acceleration time 2 to 3.",
+    "Entrench cooldown 22 (-3/Lv)s to 20 (-2/Lv)s."
    ],
    "strengths": [
     "พาสซีฟระยะไกลสุดทำให้เธอชนะการเทรดโพคโดยไม่ต้องเข้าระยะปะทะ",
@@ -2037,7 +2037,7 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Dimensional Cube detonation time now matches the Dimensional Portal pull-back time when the centre is inside the circle."
+    "Dimensional Cube: if its center is inside the Dimensional Portal circle, detonation timing matches the portal pull-back."
    ],
    "strengths": [
     "สแต็กพาสซีฟตอบแทนการเรียงสกิลอย่างฉลาด",
@@ -2557,8 +2557,8 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Soul Seal bonus damage on normal attacks can now critically strike.",
-    "Soul Seal bonus damage changed from 0.45AD to 16~30 (+0.35AD)."
+    "Soul Seal bonus damage after skills or recalls can now critically strike.",
+    "Soul Seal bonus damage 0.45AD to 16~30 (+0.35AD)."
    ],
    "strengths": [
     "Shadow Step ให้พีลตัวเองที่มาร์คแมนส่วนใหญ่ไม่มี",
@@ -3053,7 +3053,7 @@
      "desc": "Florentino พุ่งโจมตีพร้อมกับติดสัญลักษณ์ Duel ให้เป้าหมายเป็นเวลา 55 ระหว่างนั้นเป้าหมายดังกล่าวจะถูกลดเกราะลง 15% และจะโดนความเสียหายแรงขึ้น 20% ส่วน Florentino จะได้รับความเสียหายเบาลง 50% และป้องกันสถานะจากคนอื่นที่ไม่ได้ติดสัญลักษณ์ หากเป้าหมายตายระหว่างติด Duel Florentino จะสร้างความเสียหายกายภาพเพิ่มขึ้น 20 จนจบเกม (สูงสุด 10 ครั้ง)"
     }
    ],
-   "tier": "S+",
+   "tier": "S",
    "proWinRate": 43.1,
    "proPickRate": 9.9,
    "proBanRate": 33.3
@@ -3105,7 +3105,7 @@
     "การอัปสกิล",
     "ลำดับอัปสกิล"
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 33.3,
    "proPickRate": 1.5,
    "proBanRate": 0.0
@@ -3607,7 +3607,7 @@
      "desc": "Iggy ชาร์จพลังและยิงระเบิดออกไป และสร้างความเสียหายเป็นวงกว้างที่สุด"
     }
    ],
-   "tier": "S",
+   "tier": "A",
    "proWinRate": 53.8,
    "proPickRate": 20.0,
    "proBanRate": 8.0
@@ -4332,7 +4332,7 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Sneak Attack bonus damage raised from 160(+12*Hero Level)(+0.45MP) to 235(+17*Hero Level)(+0.55MP)."
+    "Sneak Attack bonus damage 160(+12*Hero Level)(+0.45MP) to 235(+17*Hero Level)(+0.55MP)."
    ],
    "strengths": [
     "Concealment เป็นสเตลท์ทั้งทีมอันเดียวในเกม",
@@ -4409,7 +4409,7 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Divine Punishment recovery raised from 120(+10/Lv) to 140(+10/Lv)."
+    "Divine Punishment healing 120(+10/Lv)(+1% bonus HP) to 140(+10/Lv)(+1% bonus HP)."
    ],
    "strengths": [
     "ทรูดาเมจของ Divine Punishment มองข้ามต้านเวทไปหมดเลย",
@@ -4606,7 +4606,7 @@
      "desc": "Liliana ยิงกระสุนเวทออกไป ซึ่งจะระเบิดเมื่อไปจนสุดทาง หรือโดนศัตรู สร้าง ความเสียหายเวทพร้อมกับสตั๊นศัตรู 1 วิ"
     }
    ],
-   "tier": "S",
+   "tier": "A",
    "proWinRate": 46.0,
    "proPickRate": 21.5,
    "proBanRate": 6.8
@@ -5616,7 +5616,7 @@
      "desc": "Nakroth ฟาดฟันศัตรูในระยะอย่างบ้าคลั่ง สร้างความเสียหายกายภาพในแต่ละครั้ง และจะไม่ติดสถานะใดๆ ขณะร่ายสกิล การโจมตีครั้งสุดท้าย จะทำให้ศัตรูลอยขึ้น"
     }
    ],
-   "tier": "S+",
+   "tier": "A",
    "proWinRate": 47.7,
    "proPickRate": 14.7,
    "proBanRate": 7.7
@@ -5637,8 +5637,8 @@
    "patchStatus": "Adjusted",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Arcane Nova base damage changed from 130(+15/Lv) to 100(+20/Lv).",
-    "Lethal Rays base damage changed from 120(+30/Lv) to 100(+50/Lv)."
+    "Arcane Nova base damage 130(+15/Lv)(+0.15MP) to 100(+20/Lv)(+0.15MP).",
+    "Lethal Rays base damage 120(+30/Lv)(+0.15MP) to 100(+50/Lv)(+0.15MP)."
    ],
    "strengths": [
     "การสแตก Cursed Flame ให้รางวัลกับการแลกโพค ศัตรูที่มองข้ามเธอมีตาย",
@@ -6084,10 +6084,9 @@
    "patchStatus": "Reworked",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Toxic Mutation reworked: skill hits stack Plague marks, 3 marks explode for area damage.",
-    "Plague Energy from hits, creep kills and jungle kills raises magic power and evolves skills.",
-    "Plague Spread at 25 stacks turns every normal attack into area damage.",
-    "Plague Breath at 145 stacks can be cast while moving."
+    "Passive Toxic Mutation reworked: skill hits stack Plague marks, 3 marks explode for area damage.",
+    "Plague Energy from hero hits and creep kills raises magic power and evolves skills.",
+    "25 stacks: all basic attacks deal area damage. 75 stacks: skill 2 range up. 145 stacks: ultimate castable while moving."
    ],
    "strengths": [
     "การรีเซ็ตเต็มของ Plague Tentacle ให้โรเตชันคิทสองรอบต่อไฟต์",
@@ -6598,8 +6597,8 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Blazing Shield base damage raised from 100(+30/Lv) to 180(+36/Lv).",
-    "Blazing Shield shield raised from 100(+60/Lv) to 250(+50/Lv)."
+    "Blazing Shield base damage 100(+30/Lv)(+0.5MP) to 180(+36/Lv)(+0.5MP).",
+    "Blazing Shield shield 100(+60/Lv)(+8% Max HP) to 250(+50/Lv)(+8% Max HP)."
    ],
    "strengths": [
     "การยืนระยะของ Fire Spirit ชนะเทรด 1v1 ที่ลากยาวกับบรูเซอร์สายแลกเลือดได้",
@@ -6675,9 +6674,9 @@
    "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Pinwheel cooldown raised from 8 seconds to 10 (-0.4/Lv) seconds.",
-    "Spectral Ire cooldown raised from 12~10 seconds to 12.5~10 seconds.",
-    "Spectral Ire base damage lowered from 130(+50/Lv) to 110(+55/Lv)."
+    "Pinwheel cooldown 8s to 10 (-0.4/Lv)s.",
+    "Spectral Ire cooldown 12~10s to 12.5~10s.",
+    "Spectral Ire base damage 130(+50/Lv)(+0.7AD) to 110(+55/Lv)(+0.7AD)."
    ],
    "strengths": [
     "Naginatajutsu ทำให้เรียวม่ามีดาเมจขั้นต่ำในการยืนแลกหมัดยาวๆ สูงที่สุดในเลน",
@@ -6876,7 +6875,7 @@
      "desc": "สร้างพิธีกรรมเลือด 0.5 วินาที โดยจะนำ HP ของตนเองและเป้าหมายมาแบ่งให้เหลือเท่ากัน และจะฟื้นฟู HP ให้ตัวเองเพิ่ม  สกิลติดตัว : เมื่อ HP ต่ำกว่า 40% จะเคลื่อนที่เร็วขึ้น 30%"
     }
    ],
-   "tier": "S",
+   "tier": "S+",
    "proWinRate": 55.1,
    "proPickRate": 18.3,
    "proBanRate": 58.5
@@ -7756,8 +7755,7 @@
    "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Battlecry base damage lowered from 200(+40/Lv) to 180(+36/Lv).",
-    "Battlecry max HP scaling lowered from 4% to 3.5%."
+    "Battlecry base damage 200(+40/Lv)(+4% Max HP) to 180(+36/Lv)(+3.5% Max HP)."
    ],
    "strengths": [
     "Tough Hide ให้ภูมิซีซีทุกครั้งที่กดสกิล เดินฝ่าอัลติของมาลอค (Maloch) ได้เลย",
@@ -8813,7 +8811,7 @@
      "desc": "Yena รวมดาบเข้าด้วยกัน พร้อมกับฟันกวาดไปรอบตัว สร้างความเสียหายกายภาน 200 (+110% AD) จากนั้นพลังโจมตีของเธอจะเพิ่มขึ้น 60 เป็นเวลา 5 วิ หลังจากใช้สกิลนี้ ชุดสกิลของเธอทั้งหมดจะถูกเปลี่ยนไป"
     }
    ],
-   "tier": "S",
+   "tier": "A",
    "proWinRate": 51.0,
    "proPickRate": 17.4,
    "proBanRate": 2.9
@@ -8833,9 +8831,9 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Fierce Shot damage to heroes changed from 2% of Max HP to 28~56 (+1.5% of Max HP).",
+    "Fierce Shot damage to heroes: 2% max HP to 28~56 (+1.5% max HP).",
     "Explosive Arrow now grants vision of the target.",
-    "Hundred Barrage now lights up vision along its path."
+    "Hundred Barrage reveals vision along its path and on targets hit."
    ],
    "strengths": [
     "รูทจาก Explosive Arrow ทำงานได้เองไม่ต้องมีซัพ ลงโทษเลนสายเคลื่อนที่",
