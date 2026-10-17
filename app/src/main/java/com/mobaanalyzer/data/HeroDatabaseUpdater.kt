@@ -30,10 +30,16 @@ object HeroDatabaseUpdater {
      */
     suspend fun loadWithUpdate(context: Context): HeroDatabase = withContext(Dispatchers.IO) {
         val localFile = File(context.filesDir, LOCAL_FILE)
+        val cacheVersionFile = File(context.filesDir, "icon_cache_version")
 
-        // patch ที่มีอยู่ตอนนี้
-        val currentPatch = readPatch(localFile)
-            ?: readPatchFromAssets(context)
+        // ถ้า icon_cache_version ไม่มี หรือเก่ากว่า patch ปัจจุบัน → ล้าง cache
+        val currentPatch = readPatch(localFile) ?: readPatchFromAssets(context)
+        val cachedIconVersion = if (cacheVersionFile.exists()) cacheVersionFile.readText() else ""
+        if (cachedIconVersion != currentPatch && currentPatch != null) {
+            HeroIconCache.clearAutoCache()
+            cacheVersionFile.writeText(currentPatch)
+            Log.d(TAG, "Icon cache cleared for patch $currentPatch")
+        }
 
         // ลองดึง header จาก release เพื่อเช็ค patch ก่อนโหลดทั้งไฟล์
         val remotePatch = fetchRemotePatch()
@@ -45,7 +51,8 @@ object HeroDatabaseUpdater {
             val downloaded = downloadHeroesJson()
             if (downloaded != null) {
                 localFile.writeText(downloaded)
-                Log.d(TAG, "heroes.json updated (patch $remotePatch)")
+                HeroIconCache.clearAutoCache()
+                Log.d(TAG, "heroes.json updated (patch $remotePatch), icon cache cleared")
             }
         }
 

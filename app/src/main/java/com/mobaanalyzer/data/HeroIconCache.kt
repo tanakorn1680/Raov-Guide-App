@@ -154,6 +154,19 @@ object HeroIconCache {
         saveMeta()
     }
 
+    /** ล้าง cache ทั้งหมดยกเว้น custom icon — เรียกตอน patch เปลี่ยน */
+    fun clearAutoCache() {
+        iconDir.listFiles { f -> f.name.endsWith(".jpg") }?.forEach { f ->
+            val id = f.nameWithoutExtension
+            if (meta[id]?.custom != true) {
+                f.delete()
+                meta.remove(id)
+            }
+        }
+        saveMeta()
+        Log.d(TAG, "Auto cache cleared")
+    }
+
     fun isCached(heroId: String) =
         File(iconDir, "$heroId.jpg").let { it.exists() && it.length() > 0 }
 
