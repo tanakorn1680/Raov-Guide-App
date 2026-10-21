@@ -9,60 +9,52 @@ import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 
-/**
- * ดึง heroes.json จาก GitHub Releases อัตโนมัติ
- * - ถ้ามี version ใหม่กว่า → โหลดและบันทึกไว้ใน internal storage
- * - ถ้าไม่มีเน็ต / version เหมือนเดิม → ใช้ไฟล์เดิม
- * - ลำดับ: internal storage → assets (APK)
- */
 object HeroDatabaseUpdater {
 
     private const val TAG = "HeroDatabaseUpdater"
     private const val HEROES_URL =
         "https://github.com/tanakorn1680/Raov-guide/releases/latest/download/heroes.json"
     private const val LOCAL_FILE = "heroes.json"
+    private const val CACHE_VER_FILE = "icon_cache_version"
     private const val CONNECT_TIMEOUT = 8_000
     private const val READ_TIMEOUT = 12_000
 
-    /**
-     * โหลด HeroDatabase — ดึงจาก release ถ้ามีเวอร์ชันใหม่
-     * เรียกแบบ suspend ใน background
-     */
     suspend fun loadWithUpdate(context: Context): HeroDatabase = withContext(Dispatchers.IO) {
         val localFile = File(context.filesDir, LOCAL_FILE)
-        val cacheVersionFile = File(context.filesDir, "icon_cache_version")
+        val cacheVerFile = File(context.filesDir, CACHE_VER_FILE)
 
-        // ถ้า icon_cache_version ไม่มี หรือเก่ากว่า patch ปัจจุบัน → ล้าง cache
-        val currentPatch = readPatch(localFile) ?: readPatchFromAssets(context)
-        val cachedIconVersion = if (cacheVersionFile.exists()) cacheVersionFile.readText() else ""
-        if (cachedIconVersion != currentPatch && currentPatch != null) {
+        // เช็ค iconVersion จาก assets (bundle ใน APK) ก่อน
+        // ถ้า cachedIconVersion ต่างจาก assets → ล้าง cache (เช่นหลัง build ใหม่)
+        val assetIconVer = readIconVersionFromAssets(context) ?: "1"
+        val cachedIconVer = if (cacheVerFile.exists()) cacheVerFile.readText().trim() else ""
+        if (cachedIconVer != assetIconVer) {
             HeroIconCache.clearAutoCache()
-            cacheVersionFile.writeText(currentPatch)
-            Log.d(TAG, "Icon cache cleared for patch $currentPatch")
+            cacheVerFile.writeText(assetIconVer)
+            Log.d(TAG, "Icon cache cleared — iconVersion $assetIconVer")
         }
 
-        // ลองดึง header จาก release เพื่อเช็ค patch ก่อนโหลดทั้งไฟล์
+        // ดึง patch ใหม่จาก Releases
+        val currentPatch = readPatch(localFile) ?: readPatchFromAssets(context)
         val remotePatch = fetchRemotePatch()
-
-        val shouldUpdate = remotePatch != null && remotePatch != currentPatch
-
-        if (shouldUpdate) {
-            Log.d(TAG, "New patch: $currentPatch → $remotePatch, downloading...")
+        if (remotePatch != null && remotePatch != currentPatch) {
             val downloaded = downloadHeroesJson()
             if (downloaded != null) {
                 localFile.writeText(downloaded)
-                HeroIconCache.clearAutoCache()
-                Log.d(TAG, "heroes.json updated (patch $remotePatch), icon cache cleared")
+                // ถ้า iconVersion ใน remote ต่างจากที่มี → ล้าง cache
+                val remoteIconVer = readIconVersionFromJson(downloaded) ?: assetIconVer
+                if (remoteIconVer != assetIconVer) {
+                    HeroIconCache.clearAutoCache()
+                    cacheVerFile.writeText(remoteIconVer)
+                    Log.d(TAG, "Icon cache cleared — remote iconVersion $remoteIconVer")
+                }
+                Log.d(TAG, "heroes.json updated: patch $remotePatch")
             }
         }
 
-        // โหลด — local file ก่อน, fallback assets
-        return@withContext when {
-            localFile.exists() && localFile.length() > 0 -> {
-                HeroDatabase.fromJson(localFile.readText())
-            }
-            else -> HeroDatabase.load(context)
-        }
+        return@withContext if (localFile.exists() && localFile.length() > 0)
+            HeroDatabase.fromJson(localFile.readText())
+        else
+            HeroDatabase.load(context)
     }
 
     private fun readPatch(file: File): String? = try {
@@ -71,12 +63,20 @@ object HeroDatabaseUpdater {
     } catch (e: Exception) { null }
 
     private fun readPatchFromAssets(context: Context): String? = try {
-        val text = context.assets.open(LOCAL_FILE).bufferedReader().use { it.readText() }
-        JSONObject(text).optString("patch").ifEmpty { null }
+        JSONObject(context.assets.open(LOCAL_FILE).bufferedReader().use { it.readText() })
+            .optString("patch").ifEmpty { null }
+    } catch (e: Exception) { null }
+
+    private fun readIconVersionFromAssets(context: Context): String? = try {
+        JSONObject(context.assets.open(LOCAL_FILE).bufferedReader().use { it.readText() })
+            .optString("iconVersion").ifEmpty { null }
+    } catch (e: Exception) { null }
+
+    private fun readIconVersionFromJson(json: String): String? = try {
+        JSONObject(json).optString("iconVersion").ifEmpty { null }
     } catch (e: Exception) { null }
 
     private fun fetchRemotePatch(): String? = try {
-        // ดึงแค่ 512 bytes แรกเพื่อหา patch field
         val conn = URL(HEROES_URL).openConnection() as HttpURLConnection
         conn.connectTimeout = CONNECT_TIMEOUT
         conn.readTimeout = READ_TIMEOUT
@@ -84,13 +84,9 @@ object HeroDatabaseUpdater {
         if (conn.responseCode == 200) {
             val buf = ByteArray(512)
             val read = conn.inputStream.use { it.read(buf) }
-            val head = String(buf, 0, read)
-            Regex(""""patch"\s*:\s*"([\d.]+)"""").find(head)?.groupValues?.get(1)
+            Regex(""""patch"\s*:\s*"([\d.]+)"""").find(String(buf, 0, read))?.groupValues?.get(1)
         } else null
-    } catch (e: Exception) {
-        Log.d(TAG, "fetchRemotePatch failed: ${e.message}")
-        null
-    }
+    } catch (e: Exception) { null }
 
     private fun downloadHeroesJson(): String? = try {
         val conn = URL(HEROES_URL).openConnection() as HttpURLConnection
@@ -99,8 +95,5 @@ object HeroDatabaseUpdater {
         conn.setRequestProperty("User-Agent", "RaovGuide-App")
         if (conn.responseCode == 200) conn.inputStream.bufferedReader().use { it.readText() }
         else null
-    } catch (e: Exception) {
-        Log.w(TAG, "download failed: ${e.message}")
-        null
-    }
+    } catch (e: Exception) { null }
 }
