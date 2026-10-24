@@ -44,6 +44,20 @@ object HeroIconCache {
         metaFile = File(iconDir, META_FILE)
         meta = loadMeta()
         cdnUrlMap = loadCdnUrls(context)
+
+        // ล้าง cache ถ้า iconVersion ใน assets เปลี่ยน
+        val cacheVerFile = File(context.filesDir, "icon_cache_version")
+        val assetVer = try {
+            val json = context.assets.open("heroes.json").bufferedReader().use { it.readText() }
+            org.json.JSONObject(json).optString("iconVersion", "1")
+        } catch (e: Exception) { "1" }
+        val cachedVer = if (cacheVerFile.exists()) cacheVerFile.readText().trim() else ""
+        if (cachedVer != assetVer) {
+            clearAutoCache()
+            cacheVerFile.writeText(assetVer)
+            Log.d(TAG, "Cache cleared — iconVersion $assetVer")
+        }
+
         pruneOrphans(knownHeroIds)
         initialized = true
     }
