@@ -88,12 +88,6 @@
     "cc",
     "heal"
    ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Wicked Plot true damage 55(+8*Hero Level)(+0.3MP) to 84(+6*Hero Level)(+0.3MP).",
-    "Matrix of Woe base damage 125(+15/Lv)(+0.3MP) to 115(+23/Lv)(+0.3MP)."
-   ],
    "strengths": [
     "Wicked Plot เป็นทรูดาเมจ ข่มได้ทั้งแทงค์และตัวที่มีโล่",
     "สตัน 2.5 วินาทีของ Magic Prison เป็นหนึ่งในสตันที่ยาวที่สุดที่เมจจะมีได้",
@@ -148,7 +142,7 @@
      "desc": "Aleister กักขังศัตรูในคุกเวท โดยจะสร้างความเสียหายเวทแต่ละครั้ง พร้อมกับทำให้ติดสตัน 2.5 วินาที (การโจมตีแต่ละครั้งทำให้ติดคำสาป 1 ครั้ง)"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.2,
    "proBanRate": 0.0
   },
@@ -291,7 +285,7 @@
      "desc": "ลีอคเป้าหมายที่เลือกพร้อมทั้งหายตัว 1.5 วินาที จากนั้นก็ปรากฏตัวออกมาฟันกวาดรอบตัว สร้างความเสียหายจริงตาม HP ปัจจุบันของเป้าหมาย โดยจะรุนแรงขึ้น 25% ต่อ 1 เป้าหมายที่โดนสูงสุด 50%   หากใช้ใส่ศัตรูจะลดความเร็วลง และ Allain จะได้รับโล่กันความเสียหาย   หากใช้ใส่เพื่อนจะเพิ่มความเร็วให้เป้าหมายและทำให้เพื่อนได้รับโล่กันความเสียหาย   หากใช้ใส่แฟน (Butterfly) จะได้รับผลเหมือนใช้ใส่เพื่อนทุกประการ แต่  จะได้รับบัพกัน CC เพิ่มอีกด้วย"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "amily",
@@ -304,11 +298,6 @@
    "damage": "PHYSICAL",
    "tags": [
     "poke"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Combo: enhanced normal attack now dashes forward when there is no target."
    ],
    "strengths": [
     "พาสซีฟ Duel ทำให้ทุกการโจมตีใส่เป้าที่อยู่โดดเดี่ยวมีดาเมจ 1.5x ตั้งแต่เลเวล 3",
@@ -364,7 +353,7 @@
      "desc": "Amily เข้าสู่โหมดคลั่ง ซึ่งหลังจาก 1วิ จะสร้าง ความเสียหายเวท 300 จากนั้นเธอจะได้รับพลังโจมตีเพิ่มขึ้น 100 หน่วย และความเร็วเคลื่อนที่ 40 หน่วย รวมถึงต้านทานความเสียหาย 40 หน่วย ในvณะเดียวกันเธอจะสร้างความเสียหายเวท 60 ทุก 8วิ"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "annette",
@@ -433,7 +422,7 @@
      "desc": "Annette พุ่งไปยังจุดที่กำหนด และเรียกพายุเฮอริเคนออกมาผลักให้ศัตรูที่อยู่รอบๆ กระเด็นออกไป พร้อมกับสร้างความเสียหายเวท ระหว่างนั้นพายุที่เธอสร้างจะขวางทางไม่ให้ศัตรูสามารถเดินผ่านได้ ส่วนพันธมิตรที่อยู่ในวงพายุจะวิ่งเร็วขึ้น และโจมตีเร็วขึ้นเป็นเวลา 3.5 วิ (สถานะผิดปกติทั้งหมดจะถูกลบออกจาก Annette หลังใช้สกิลนี้)"
     }
    ],
-   "tier": "B",
+   "tier": "C",
    "proWinRate": 52.0,
    "proPickRate": 12.8,
    "proBanRate": 6.1
@@ -577,7 +566,7 @@
      "desc": "Arduin ระเบิดพลัง สร้างความเสียหายเวทแก่ศัตรูรอบๆ พร้อมกับได้รับเกราะเท่ากับ 10% ของพลังชีวิตสูงสุด เป็นเวลา 5 วิ หลังจากเกราะทำงาน 8 วิ การโจมตีปกติ 3 ครั้ง หลังจากนี้ของ Arduin จะได้ สร้างความเสียหายจริงเพิ่ม และทุกครั้งที่โจมตีปกติโดนเป้าหมาย จะลดคูลดาวน์สกิล Cull ลง 1 วิ"
     }
    ],
-   "tier": "C",
+   "tier": "B",
    "proPickRate": 0.9,
    "proBanRate": 0.2
   },
@@ -648,7 +637,7 @@
      "desc": "9"
     }
    ],
-   "tier": "A",
+   "tier": "B",
    "proPickRate": 0.9,
    "proBanRate": 0.2
   },
@@ -808,13 +797,6 @@
     "tanky",
     "cc"
    ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Uninjured bonus damage 10 (+1% Max HP) to 28~56 (+1% Max HP).",
-    "Bounced cooldown 8 (-0.3/Lv)s to 7.5 (-0.3/Lv)s.",
-    "Rake Down impact damage 150(+15/Lv)(+6% Max HP) to 150(+30/Lv)(+6% Max HP)."
-   ],
    "strengths": [
     "Child of the Sea ให้ยืนระยะจริงในเทรดยาวโดยไม่ต้องกลับบ้าน",
     "สตันกำแพงของ Sea Anchor คือการล็อก 1 วินาทีแบบพอยต์แอนด์คลิกผ่านภูมิประเทศ",
@@ -940,7 +922,7 @@
      "desc": "Aya จะกระโดดไปขี่อยู่บนหัวพัธมิตรที่กำหนด พร้อมกับสร้างโล่ ซึ่งโล่จะเพิ่มขึ้นหากเป้าหมายเป็นแอสซาซิน แครี่ และ เมจ ขณะสิงร่าง: หากกดสกิลนี้ซ้ำจะสามารถสร้างโล่ให้พันธมิตรที่ถูกขี่อยู่ได้ แต่หากลากสกิลนี้จะเป็นการกระโดดลงไปยังจุดที่กำหนดแทน"
     }
    ],
-   "tier": "S+",
+   "tier": "S",
    "proWinRate": 51.4,
    "proPickRate": 6.3,
    "proBanRate": 8.0
@@ -1012,7 +994,7 @@
      "desc": "Azzen'Ka ปล่อยพายุทรายออกไปโจมตีศัตรูของเขา สร้างความเสียหายเวทแก่ศัตรูที่โดน จากนั้นพายุทรายจะขยายตัวขึ้นที่พื้นอย่างต่อเนื่อง สร้างความเสียหายเวทแก่ศัตรูในระยะและลดความเร็วเคลื่อนที่ลง 60%"
     }
    ],
-   "tier": "A",
+   "tier": "B",
    "proPickRate": 1.0,
    "proBanRate": 0.0
   },
@@ -1028,12 +1010,6 @@
    "tags": [
     "tanky",
     "cc"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Wild Stomp now grants 2 stacks of damage reduction on activation.",
-    "Damage reduction 6% (+0.5%/Lv), max 4 stacks to 4% (+0.8/Lv), max 5 stacks."
    ],
    "strengths": [
     "Wild Prison ฝัง AoE นาน 3 วินาที เป็นฮาร์ดซีซีที่ยาวสุดในเกม",
@@ -1162,7 +1138,7 @@
      "desc": "Sands of Time"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -1233,7 +1209,7 @@
      "desc": "He unleashes a powerful sword strike in the designated direction, slowing enemies significantly for a moment, then dashes in a wide range, dealing massive physical damage.When in Sea Beast form, his ultimate move does not require a sword strike but automatically dashes forward, while reducing the cooldown of Water Dash. With the ability to cause large-scale pressure and high damage, this skill makes Billow an extremely formidable opponent in teamfights.With flexible mobility and powerful damage from his skill set, Billow promises to become a formidable Assassin on the battlefield."
     }
    ],
-   "tier": "S+",
+   "tier": "S",
    "proWinRate": 52.6,
    "proPickRate": 29.2,
    "proBanRate": 24.7
@@ -1305,7 +1281,7 @@
      "desc": "Storm Strike"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proWinRate": 42.4,
    "proPickRate": 11.3,
    "proBanRate": 2.7
@@ -1376,7 +1352,7 @@
      "desc": "Bolt Baron flies into the sky, transforming into the Thunder Lord.The transformation lasts 1.5 seconds, during which time Bolt Baron is immune to control and has 30% increased movement speed, is not blocked by walls, and creates 5 lightning bolts that randomly strike nearby enemies (prioritizing champions). Each lightning strike deals magic damage and grants Bolt Baron 1 Thunder point and a shield that lasts 1 second. When landing, Bolt Baron deals magic damage to nearby enemies.The transformation lasts 10 seconds, during which time normal attacks will receive 2 Thunder points and create a chain of lightning that bounces between enemies and deals magic damage. In addition, the enhanced attack also has an increased damage range."
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "bonnie",
@@ -1445,7 +1421,7 @@
      "desc": "If Bonnie's skill 1 Electromagnetic Blast strikes an enemy, she will gain 60% movement speed that decreases over 1,5s."
     }
    ],
-   "tier": "A"
+   "tier": "S"
   },
   {
    "id": "bright",
@@ -1513,7 +1489,7 @@
      "desc": "เข้าสู่โหมดเทพ 6 วินาที ซึ่งความเสียหายที่ได้รับช่วง 3 วินาทีแรกจะแสดงผลใน 3 วินาทีหลังแทน แต่ถ้าหากผู้ที่โจมตี ฺBright โดนสังหาร จะทำให้ความเสียหายถูกยกเลิก ในโหมดเทพจะไม่สามารถใช้สกิลแรกได้ แต่การโจมตีไกลปกติจะมีผลเจาะเกราะและติดสัญลักษณ์แก่ศัตรูในระยะหอกทั้งหมด ส่วนการโจมตีใกล้จะกว้างขึ้นและสร้างโบนัสความเสียหายจริงมากขึ้นเมื่อโจมตีใส่เป้าหมายที่ติดสัญลักษณ์"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.3,
    "proBanRate": 0.2
   },
@@ -1529,13 +1505,6 @@
    "tags": [
     "poke",
     "mobile"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Redeploy: passive attack damage doubled while active.",
-    "Redeploy acceleration time 2 to 3.",
-    "Entrench cooldown 22 (-3/Lv)s to 20 (-2/Lv)s."
    ],
    "strengths": [
     "พาสซีฟระยะไกลสุดทำให้เธอชนะการเทรดโพคโดยไม่ต้องเข้าระยะปะทะ",
@@ -1660,7 +1629,7 @@
      "desc": "Butterfly หายตัวไปฟันศัตรูที่พลังชีวิตน้อยที่สุด (โดยจะเลือกฮีโร่ศัตรูก่อนเสมอ) สร้างความเสียหายกายภาพพร้อมกับลดความเสียหายจากศัตรูลง 60% และเพิ่มความเร็วเคลื่อนที่ให้ตัวเอง 50% เป็นเวลา 1 วินาที"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 75.8,
    "proPickRate": 5.6,
    "proBanRate": 2.6
@@ -1732,7 +1701,7 @@
      "desc": "Capheny ลบสถานะลดความเร็วออกจากตนเอง พร้อมกับวิ่งเร็วขึ้น 100% เป็นเวลา 0.52 จากนั้นจะได้รับบัฟเจาะเกราะสะสมครบ 10 ครั้งทันที"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 48.7,
    "proPickRate": 25.9,
    "proBanRate": 7.2
@@ -1873,7 +1842,7 @@
      "desc": "Initial Skill: Charllote draws sword shadows that deal physical damage to the target and slow them down, while gaining control immunity and damage immunity.Enhanced Skill: Charllote draws sword shadows that deal physical damage to the target and knock them up, while gaining more control immunity and damage immunity."
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.2,
    "proBanRate": 0.0
   },
@@ -1944,7 +1913,7 @@
      "desc": "Chaugnar เรียกพลังงานคาออสเพื่อปกป้องพันธมิตรใกล้เคียง สามารถขจัด สถานะผิดปกติทั้งหมดที่ได้รับ พร้อมต้านทานสถานะผิดปกติและทำให้พันธมิตรสร้างความเสียหายได้เพิ่มขึ้น 0.5 วินาที (3 วิ สำหรับตัวเอง) พร้อมกับลดคูลดาวน์สกิล Shock Wave และนอกจากนี้เขายังสามารถใช้สกิลได้ โดยไม่เสียมานาเป็นเวลา 6 วินาที"
     }
    ],
-   "tier": "C",
+   "tier": "B",
    "proWinRate": 61.5,
    "proPickRate": 2.2,
    "proBanRate": 1.7
@@ -2033,11 +2002,6 @@
    "tags": [
     "burst",
     "mobile"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Dimensional Cube: if its center is inside the Dimensional Portal circle, detonation timing matches the portal pull-back."
    ],
    "strengths": [
     "สแต็กพาสซีฟตอบแทนการเรียงสกิลอย่างฉลาด",
@@ -2171,7 +2135,7 @@
      "desc": "ในระยะ 3 วินาที ความเสียหายที่ได้รับจะแปรเปลี่ยนเป็นการฟื้นฟู HP แทน โดยจะฟื้นฟูได้สูงสุด 20% ของ Max HP ต่อการโดนโจมตี 1 ครั้ง"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "diao-chan",
@@ -2240,7 +2204,7 @@
      "desc": "Diao Chan เรียกพายุหิมะเพื่อโจมตีศัตรูในระยะ สร้างความเสียหายเวท ทำให้เคลื่อนที่ช้าลง 30% และเธอยังได้รับโบนัสเกราะ 600 หน่วย"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "diaochan",
@@ -2268,6 +2232,13 @@
    "tags": [
     "poke",
     "cc"
+   ],
+   "patchStatus": "Reworked",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Genesis Blast split off into a standalone Skill 4: 500 + 250/Lv + 0.80MP, 50 (-5/Lv)s cooldown, 90 (+5/Lv) mana.",
+    "Fallen Star drops immediately when cast inside the inner circle of Skill 1.",
+    "Fallen Star cooldown 11 (-0.6/Lv)s to 12.5 (-0.5/Lv)s."
    ],
    "strengths": [
     "Arcane Body แปลงมานาเป็น HP ทำให้เบิร์สต์ ดิแรก ยากมาก",
@@ -2323,7 +2294,7 @@
      "desc": "Genesis Barrier : สร้างโลนาดใหญ่ขึ้นด้านหน้าที่สามารป้องกันการโจมตีระยะไกลจากศัตรู โดยจะเสียมานา -5% ต่อวิ จากนั้น 23 จะสามารถกดใช้สกิลอีกครั้งเพื่อยิง Genesis Blast พร้อมกับฟื้นฟู 2% HP และมานา ตามจํานวนการโจมตีที่โล่ได้รับ Genesis Resonance: เพิ่มความเร็วโจมตี 25% และการโจมตีปกติจะสราง ความเสียหายเวท ทุก 0.23 เป็นวงกว้าง Genesis Blast: สร้างความเสียหายเวn และสร้างความเสียหาย 15% ของ HP ที่เสียไป"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "dolia",
@@ -2392,7 +2363,7 @@
      "desc": "Resets the longest current skill cooldown of a teammate within range, transferring the cooldown to herself. Prioritizes covenant teammates."
     }
    ],
-   "tier": "S",
+   "tier": "A",
    "proWinRate": 47.0,
    "proPickRate": 22.9,
    "proBanRate": 37.9
@@ -2554,12 +2525,6 @@
     "poke",
     "mobile"
    ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Soul Seal bonus damage after skills or recalls can now critically strike.",
-    "Soul Seal bonus damage 0.45AD to 16~30 (+0.35AD)."
-   ],
    "strengths": [
     "Shadow Step ให้พีลตัวเองที่มาร์คแมนส่วนใหญ่ไม่มี",
     "เบิร์สต์พาสซีฟ-Q-ออโต้ลบแครี่ได้ในไม่ถึงวินาที",
@@ -2614,7 +2579,7 @@
      "desc": "Eland'orr ปล่อย Soul Lamp ออกไปผลักศัตรูถอยหลังพร้อมกับสร้าง ความเสียหายเวท 300 (+100%กายภาพเพิ่มขึ้น) จากนั้น Sout Lamp จะค่อยๆ บินไปยังทิศที่กําหนดต่ออย่างช้าๆ"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 52.9,
    "proPickRate": 29.7,
    "proBanRate": 45.6
@@ -2766,7 +2731,7 @@
      "desc": "Enzo พุ่งไปด้านหลังศัตรูที่ถูกตะขอเกี่ยวไง สร้างความเสียหายกายภาพ 350 | (+200% Bonus AD) แก่ศัตรูทั้งหมดที่พุ่งผ่าน และเขาจะโดนโจมตีเบาลง 50% ขณะพุง (สามารถใช้สกิลนี้ไดเมื่อมีศัตรูถูกตะขอเกียวไว้เท่านั้น)"
     }
    ],
-   "tier": "B",
+   "tier": "C",
    "proWinRate": 50.0,
    "proPickRate": 18.4,
    "proBanRate": 13.8
@@ -2838,7 +2803,7 @@
      "desc": "6.8s"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.7,
    "proBanRate": 0.0
   },
@@ -2854,6 +2819,11 @@
    "tags": [
     "tanky",
     "cc"
+   ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Blood Drinker stacks now decay one by one, each subsequent stack lasting 1 second."
    ],
    "strengths": [
     "Blood Drinker ตอบแทนการทุ่มสุดตัว แลกยิ่งนานยิ่งดูดเลือดเยอะ",
@@ -2912,6 +2882,43 @@
    "tier": "C",
    "proPickRate": 1.0,
    "proBanRate": 0.2
+  },
+  {
+   "id": "evita",
+   "name": "Evita",
+   "aliases": [],
+   "role": "UNKNOWN",
+   "lanes": [],
+   "damage": "PHYSICAL",
+   "tags": [],
+   "patchStatus": "Reworked",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "New hero released: Abyssal mage who clusters enemies with Hand of Mastery, then shields herself while the Essence Devourer shreds magic defense in area fights."
+   ],
+   "skills": [
+    {
+     "slot": "passive",
+     "name": "Conversion Ritual",
+     "desc": "Evita gradually builds Abyssal Energy. When it is full, her next skill hit consumes all of it and sends the Essence Devourer charging at the target, dealing magic damage to enemies in its path and granting Evita a shield."
+    },
+    {
+     "slot": "skill1",
+     "name": "Dark Pulse",
+     "desc": "Evita launches the Essence Devourer in a target direction. When it hits an enemy or reaches max range it explodes, scattering energy projectiles in all directions that deal damage."
+    },
+    {
+     "slot": "skill2",
+     "name": "Hand of Mastery",
+     "desc": "Evita tears two Abyssal Fissures into the ground. After a short delay Abyssal Energy erupts, dealing damage and slowing enemies; the central area deals increased damage and knocks up."
+    },
+    {
+     "slot": "ultimate",
+     "name": "Essence Blitz",
+     "desc": "Evita gains a shield and the Essence Devourer stampedes forward, slowing enemies, then switches to seek-and-attack mode. During this time Abyssal Energy builds much faster. Each hit on an enemy deals damage, reduces their magic defense and grants Evita a shield."
+    }
+   ],
+   "tier": "B"
   },
   {
    "id": "fennik",
@@ -2980,7 +2987,7 @@
      "desc": "Fennik ปาลูกตุ้มออกไปที่พื้นทำให้เกิดพายุสายฟ้าขึ้น 6 วินาที สร้าง ความเสียหายกายภาพ ใส่ศัตรูในรัศมีทุก 0.5 วินาที และ ลดความเร็วเคลื่อนที่ 50% เป็นเวลา 1 วิ ส่วนศัตรูที่โดนสายฟ้าตรงกลางพายุจะได้รับความเสียหาย 2 เท่า (การโจมตีของสกิลนี้จะช่วยเพิ่มตราสัญลักษณ์ให้กับสกิล Thief's Mark)"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proWinRate": 46.9,
    "proPickRate": 16.7,
    "proBanRate": 3.6
@@ -3053,7 +3060,7 @@
      "desc": "Florentino พุ่งโจมตีพร้อมกับติดสัญลักษณ์ Duel ให้เป้าหมายเป็นเวลา 55 ระหว่างนั้นเป้าหมายดังกล่าวจะถูกลดเกราะลง 15% และจะโดนความเสียหายแรงขึ้น 20% ส่วน Florentino จะได้รับความเสียหายเบาลง 50% และป้องกันสถานะจากคนอื่นที่ไม่ได้ติดสัญลักษณ์ หากเป้าหมายตายระหว่างติด Duel Florentino จะสร้างความเสียหายกายภาพเพิ่มขึ้น 20 จนจบเกม (สูงสุด 10 ครั้ง)"
     }
    ],
-   "tier": "S",
+   "tier": "S+",
    "proWinRate": 43.1,
    "proPickRate": 9.9,
    "proBanRate": 33.3
@@ -3070,6 +3077,11 @@
    "tags": [
     "burst",
     "mobile"
+   ],
+   "patchStatus": "Nerfed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Archer form Arrowstorm base damage 70 (+35/Lv) (+0.28AD) to 64 (+32/Lv) (+0.26AD)."
    ],
    "strengths": [
     "ดาเมจฟิสิคัลผสมเวทบีบให้ฝั่งตรงข้ามต้องจัดของป้องกันแบบไฮบริด เปลืองเงินสุดๆ",
@@ -3105,7 +3117,7 @@
     "การอัปสกิล",
     "ลำดับอัปสกิล"
    ],
-   "tier": "S",
+   "tier": "B",
    "proWinRate": 33.3,
    "proPickRate": 1.5,
    "proBanRate": 0.0
@@ -3122,6 +3134,13 @@
    "tags": [
     "tanky",
     "cc"
+   ],
+   "patchStatus": "Nerfed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Extravagant base damage 380 (+76/Lv) (+0.55MP) to 350 (+70/Lv) (+0.5MP).",
+    "Extravagant damage over time 30 (+6/Lv) to 35 (+7/Lv).",
+    "Indulgence cooldown 42 (-7/Lv)s to 45 (-5/Lv)s."
    ],
    "strengths": [
     "การผลักของ The Touch เป็นพีลที่ไม่มีคูลดาวน์ ยิงทุก 4 ออโต้",
@@ -3177,7 +3196,7 @@
      "desc": "Gildur เรียกวงเวททองคำออกมา สร้างความเสียหายเวทแต่ละครั้งและสตั๊นศัตรูรอบๆ ตัว (สกิลนี้จะต้องถูกใช้งานเป็นเวลา 3.5 วิ และหากขยับตัว หรือใช้สกิลอื่นหลังจาก 1 วิ จะทำให้สกิลนี้หยุด"
     }
    ],
-   "tier": "B",
+   "tier": "C",
    "proWinRate": 36.8,
    "proPickRate": 3.2,
    "proBanRate": 1.4
@@ -3536,7 +3555,7 @@
      "desc": "Helen heals her ally with the lowest HP within range and increases their armor and magic defense."
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.7,
    "proBanRate": 0.5
   },
@@ -3607,7 +3626,7 @@
      "desc": "Iggy ชาร์จพลังและยิงระเบิดออกไป และสร้างความเสียหายเป็นวงกว้างที่สุด"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 53.8,
    "proPickRate": 20.0,
    "proBanRate": 8.0
@@ -3679,7 +3698,7 @@
      "desc": "Ignis สร้างวงเวทไฟขึ้น หลังจาก 1 วิ จะสร้างความเสียหายเวทแก่ศัตรูทั้งหมดภายระยะ หากศัตรูติดสัญลักษณ์จะได้รับความเสียหายจริงแทน"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proWinRate": 47.2,
    "proPickRate": 12.3,
    "proBanRate": 2.0
@@ -3751,7 +3770,7 @@
      "desc": "Ilumia สั่งให้สายฟ้าโจมตีใส่บริเวณที่ฮีโร่ศัตรูอยู่ ทั่วทั้งแผนที่ (ไม่ล็อคเป้าหมาย) สร้างความเสียหายเวทและทำให้ติดสตั๊น"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -4101,7 +4120,7 @@
      "desc": "Keera เข้าสู่โหมด Dark Spirit เธอจะวิ่งเร็วขึ้นเป็นเวลา 8 วินาที ขณะเดียวกันจะสามารถวิ่งทะลุสิ่งกีดขวาง และป้องกันการโจมตีปกติ 3 ครั้ง (Keera จะหายตัวขณะอยู่ในสิ่งกีดขวาง) เมื่อสิ้นสุนจะรีเฟรชคูลดาวน์สกิล 1 และ 2 ทันที"
     }
    ],
-   "tier": "A",
+   "tier": "S+",
    "proWinRate": 40.9,
    "proPickRate": 15.9,
    "proBanRate": 11.3
@@ -4173,7 +4192,7 @@
      "desc": "Kil'Groth ปลดปล่อยความสามารถทั้งหมดของเขา ทำให้เขาได้รับการสะสมของเอฟเฟค Fanatic 5 ครั้งทันที พร้อมกับลบสถานะผิดปกติออกทั้งหมด และเพิ่มความเร็วเคลื่อนที่ (ซึ่งความเร็วที่ได้รับเพิ่มจะค่อยๆ ลดลง) หลังจากนั้น Kil'Groth จะป้องกันสถานะทั้งหมดเป็นเวลา 4 วิ และทุกครั้งที่โจมตีปกติโดนฮีโร่ศัตรูจเพิ่มระยะเวลาให้กับเอฟเฟค 0.3 วิ (สูงสุด 3 วิ)"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "kriknak",
@@ -4187,6 +4206,11 @@
    "tags": [
     "burst",
     "cc"
+   ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Terrifying Plague base damage 300 (+50/Lv) (+1.4 Bonus AD) to 325 (+65/Lv) (+1.5 Bonus AD)."
    ],
    "strengths": [
     "Terrifying Plague ทำดาเมจ 10% ของเลือดสูงสุด ลงโทษแทงค์ที่สแตกเลือด",
@@ -4313,7 +4337,7 @@
      "desc": "Krixi เพิ่มความเร็วขึ้น 15% พร้อมกับเรียกฝนดาวตกกระหน่ำโจมตีศัตรูใกล้เคียงเป็นเวลา 5 วินาที สร้างความเสียหายเวท โดยศัตรูแต่ละตัวจะโดนโจมตีได้สูงสุด 4 ครั้ง"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -4328,11 +4352,6 @@
    "damage": "MAGIC",
    "tags": [
     "cc"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Sneak Attack bonus damage 160(+12*Hero Level)(+0.45MP) to 235(+17*Hero Level)(+0.55MP)."
    ],
    "strengths": [
     "Concealment เป็นสเตลท์ทั้งทีมอันเดียวในเกม",
@@ -4388,7 +4407,7 @@
      "desc": "Krizzix เพิ่มความเร็วเคลื่อนที่ให้ฮีโร่พันธมิตรรอบๆ 30% และหลังจาก 1 วิ จะทําการพรางตัวให้พันธมิตรดังกล่าวเป็นเวลาสูงสุด 4 วิ ซึ่งการพรางตัวจะถูกยกเลิกหากทําการโจมตี หรือสร้างสถานะผิดปกติใส่ศัตรู (vณะใช้สกิลนี้ Krizzix จะได้รับระยะการมองเห็นของฮีโร่ศัตรูที่ใกลที่สุด)"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proWinRate": 59.5,
    "proPickRate": 6.3,
    "proBanRate": 7.8
@@ -4405,11 +4424,6 @@
    "tags": [
     "burst",
     "mobile"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Divine Punishment healing 120(+10/Lv)(+1% bonus HP) to 140(+10/Lv)(+1% bonus HP)."
    ],
    "strengths": [
     "ทรูดาเมจของ Divine Punishment มองข้ามต้านเวทไปหมดเลย",
@@ -4606,7 +4620,7 @@
      "desc": "Liliana ยิงกระสุนเวทออกไป ซึ่งจะระเบิดเมื่อไปจนสุดทาง หรือโดนศัตรู สร้าง ความเสียหายเวทพร้อมกับสตั๊นศัตรู 1 วิ"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 46.0,
    "proPickRate": 21.5,
    "proBanRate": 6.8
@@ -4819,7 +4833,7 @@
      "desc": "Lu Bu เพิ่มพลัง ทำให้พลังโจมตีกายภาพของเขาเพิ่มขึ้น และต้านทานสถานะ เพิ่มขึ้น 20% นอกจากนั้นการโจมตีปกติหรือใช้สกิลจะดูดพลังชีวิต เป็นเวลา 8 วินาที"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.5,
    "proBanRate": 0.0
   },
@@ -4905,7 +4919,7 @@
      "desc": "หลังจากใช้สกิล Lumburr ทุบพื้นอย่างรุนแรง ทำให้พื้นดินเบื้องหน้ากระแทก ฮีโร่ศัตรูลอยขึ้น สร้างความเสียหายกายภาพ หลังจากนั้นพื้นที่ถูกทุบจะกลายเป็นลาวา ลดความเร็วเคลื่อนที่และสร้างความเสียหายกายภาพแก่ศัตรูอย่างต่อเนื่องเป็นเวลา 5 วินาที"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "maloch",
@@ -5616,7 +5630,7 @@
      "desc": "Nakroth ฟาดฟันศัตรูในระยะอย่างบ้าคลั่ง สร้างความเสียหายกายภาพในแต่ละครั้ง และจะไม่ติดสถานะใดๆ ขณะร่ายสกิล การโจมตีครั้งสุดท้าย จะทำให้ศัตรูลอยขึ้น"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 47.7,
    "proPickRate": 14.7,
    "proBanRate": 7.7
@@ -5633,12 +5647,6 @@
    "tags": [
     "poke",
     "burst"
-   ],
-   "patchStatus": "Adjusted",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Arcane Nova base damage 130(+15/Lv)(+0.15MP) to 100(+20/Lv)(+0.15MP).",
-    "Lethal Rays base damage 120(+30/Lv)(+0.15MP) to 100(+50/Lv)(+0.15MP)."
    ],
    "strengths": [
     "การสแตก Cursed Flame ให้รางวัลกับการแลกโพค ศัตรูที่มองข้ามเธอมีตาย",
@@ -5910,7 +5918,7 @@
      "desc": "Ormarr หมุนตัวไปรอบๆ พร้อมกับอาวุธของเขา สร้างความเสียหายกายภาพในแต่ละครั้งที่โจมตีโดนศัตรู"
     }
    ],
-   "tier": "B",
+   "tier": "A",
    "proPickRate": 0.2,
    "proBanRate": 0.0
   },
@@ -5981,7 +5989,7 @@
      "desc": "Paine กระโดดถอยหลังก่อนพุ่งไปยังจุดที่กำหนด (ระหว่างนี้เขาจะได้รับความเสียหายลดลง) สร้างความเสียหายเวท และสร้างความเสียหายลดลง 50% แก่ศัตรูที่พุ่งผ่าน"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -6080,13 +6088,6 @@
    "tags": [
     "poke",
     "cc"
-   ],
-   "patchStatus": "Reworked",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Passive Toxic Mutation reworked: skill hits stack Plague marks, 3 marks explode for area damage.",
-    "Plague Energy from hero hits and creep kills raises magic power and evolves skills.",
-    "25 stacks: all basic attacks deal area damage. 75 stacks: skill 2 range up. 145 stacks: ultimate castable while moving."
    ],
    "strengths": [
     "การรีเซ็ตเต็มของ Plague Tentacle ให้โรเตชันคิทสองรอบต่อไฟต์",
@@ -6296,6 +6297,13 @@
    "tags": [
     "burst",
     "mobile"
+   ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Rising Dragon Fist cooldown 10 (-0.8/Lv)s to 8 (-0.3/Lv)s.",
+    "Volatile Fist base damage 500 (+60/Lv) (+0.8MP) to 450 (+90/Lv) (+0.9MP).",
+    "Volatile Fist magic defense reduction 50 (+30/Lv) to 100 (+20/Lv)."
    ],
    "strengths": [
     "ซีซีจาก Q + Odin's Fist มาเป็นสองจังหวะแยกกัน Purify เลยลบทั้งคู่ไม่ได้",
@@ -6579,7 +6587,7 @@
      "desc": "Rourke ลบสถานะควบคุมออกทั้งหมด และได้รับโล่กันความเสียหาย  ระหว่างนั้นเขาจะไม่โดนสถานะควบคุมใดๆ พร้อมกับเปลี่ยน 50% ของความเสียหายที่เขาสร้างไปเพิ่มเป็นค่าโล่ (หากโจมตีครีป หรือมอนสเตอร์ป่าจะเปลี่ยนแค่ 20%) ซึ่งค่าโล่จะไม่สามารถเกิน 150% ของค่าเริ่มต้น นอกจากนี้ Rourke ยังได้รับพลังโจมตีและเกราะเพิ่มเป็นเวลา 6 วิ"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "roxie",
@@ -6593,12 +6601,6 @@
    "tags": [
     "heal",
     "cc"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Blazing Shield base damage 100(+30/Lv)(+0.5MP) to 180(+36/Lv)(+0.5MP).",
-    "Blazing Shield shield 100(+60/Lv)(+8% Max HP) to 250(+50/Lv)(+8% Max HP)."
    ],
    "strengths": [
     "การยืนระยะของ Fire Spirit ชนะเทรด 1v1 ที่ลากยาวกับบรูเซอร์สายแลกเลือดได้",
@@ -6670,13 +6672,6 @@
    "tags": [
     "tanky",
     "mobile"
-   ],
-   "patchStatus": "Nerfed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Pinwheel cooldown 8s to 10 (-0.4/Lv)s.",
-    "Spectral Ire cooldown 12~10s to 12.5~10s.",
-    "Spectral Ire base damage 130(+50/Lv)(+0.7AD) to 110(+55/Lv)(+0.7AD)."
    ],
    "strengths": [
     "Naginatajutsu ทำให้เรียวม่ามีดาเมจขั้นต่ำในการยืนแลกหมัดยาวๆ สูงที่สุดในเลน",
@@ -6875,7 +6870,7 @@
      "desc": "สร้างพิธีกรรมเลือด 0.5 วินาที โดยจะนำ HP ของตนเองและเป้าหมายมาแบ่งให้เหลือเท่ากัน และจะฟื้นฟู HP ให้ตัวเองเพิ่ม  สกิลติดตัว : เมื่อ HP ต่ำกว่า 40% จะเคลื่อนที่เร็วขึ้น 30%"
     }
    ],
-   "tier": "S+",
+   "tier": "A",
    "proWinRate": 55.1,
    "proPickRate": 18.3,
    "proBanRate": 58.5
@@ -7088,7 +7083,7 @@
      "desc": "Eyes of Zealot"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 47.5,
    "proPickRate": 20.5,
    "proBanRate": 9.9
@@ -7208,7 +7203,7 @@
      "desc": "Taara ใช้ความสามารถของเธอในการฟื้นฟูพลังชีวิตสูงสุด 8% เป็นเวลา วินาที และเพิ่มความเร็วเคลื่อนที่ขึ้น"
     }
    ],
-   "tier": "B",
+   "tier": "C",
    "proWinRate": 50.4,
    "proPickRate": 21.0,
    "proBanRate": 9.4
@@ -7368,7 +7363,7 @@
      "desc": "TeeMee ใช้พลังสร้างเกราะปกป้องตัวเองและพันธมิตรที่ HP น้อยที่สุดเป็นเวลา 3 วิ (สามารถใช้ในขณะที่โดนสถานะผิดปกติได้) ระหว่างสกิลทำงาน หาก TeeMee หรือฮีโร่พันธมิตรที่ได้รับผลของสกิลตาย พวกเขาจะถูกชุบชีวิตใน 2 วิ ด้วยพลังชีวิต 2000(และ + พลังเวทบางส่วน) และมานาเต็ม 100% จากนั้นสกิลนี้จะสร้างความเสียหายเวทและลดความเร็วเคลื่อนที่ของศัตรูลง 50% เป็นเวลา 2 วิ"
     }
    ],
-   "tier": "A",
+   "tier": "S+",
    "proWinRate": 48.3,
    "proPickRate": 19.8,
    "proBanRate": 8.7
@@ -7439,7 +7434,7 @@
      "desc": "Teeri ปาอาวุธไปยังทิศที่กำหนด ซึ่งแต่ละครั้งที่โดนฮีโร่ศัตรูจะทำให้อาวุธลอยต่อไปในระยะทางสั้นๆก่อนจะพุ่งกลับมา ทุกครั้งที่อาวุธโจมตีโดนฮีโร้ขณะกำลังพุ่งไปจะสร้างความเสียหายเพิ่ม"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "tel-annas",
@@ -7594,7 +7589,7 @@
      "desc": "Thane โจมตีอย่างรุนแรงด้วยดาบแห่งแสง สร้าง ความเสียหายจริง แก่ศัตรูด้านหน้า โดยจะสร้างความเสียหายเพิ่ม 15% ของพลังชีวิตเป้าหมายที่เสียไป (Thane จะป้องกันสถานะทั้งหมด ขณะใช้สกิล)"
     }
    ],
-   "tier": "A",
+   "tier": "S+",
    "proWinRate": 44.3,
    "proPickRate": 11.9,
    "proBanRate": 1.9
@@ -7667,7 +7662,7 @@
      "desc": "The Flash วิ่งวนเป็นวงกลมเพื่อก่อพายุสายฟ้า สร้างความเสียหายเวทแก่ศัตรูรอบๆ ระหว่างนั้นเขาสามารถขยับวงพายุได้ด้วย 40% ของความเร็วเคลื่อนที่ เป็นเวลา 2 วิ หลังจากที่พายุหยุดลง ศัตรูจะถูกดูดมายังจุดศูนย์กลางพร้อมกับสร้างความเสียหายเวท"
     }
    ],
-   "tier": "B"
+   "tier": "A"
   },
   {
    "id": "thorne",
@@ -7751,11 +7746,6 @@
    "tags": [
     "tanky",
     "cc"
-   ],
-   "patchStatus": "Nerfed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Battlecry base damage 200(+40/Lv)(+4% Max HP) to 180(+36/Lv)(+3.5% Max HP)."
    ],
    "strengths": [
     "Tough Hide ให้ภูมิซีซีทุกครั้งที่กดสกิล เดินฝ่าอัลติของมาลอค (Maloch) ได้เลย",
@@ -8238,7 +8228,7 @@
      "desc": "Volkath ลบสถานะพร้อมเข้าสู่โหมด Overlord 8 วิ เขาจะถูกโจมตีเบาลง 5% การโจมตีจะสร้าง ความเสียหายกายภาพ 20 (+100%ภายภาพเพิ่มขึ้น) ใช้สกิลซ้ำจะผลักศัตรูออก สร้าง ความเสียหายกายภาพ 300 (+160%โบนัสกายภาพเพิ่มขึ้น) และเข้าสู่โหมด Doom Lord 3.5 วิ ซึ่งจะโจมตีเร็วขึ้น 80% วิ่งเร็วขึ้น 30% และป้องกันตาย เมื่อสิ้นสุดจะฟื้นฟู 25% ของ HP สูงสุด Dark Might: หากโจมตีโดนฮีโร่ในร่าง Overlord จะเพิ่มเวลาของ Doom Lord ขึ้น 0.5 วิ (สูงสุด 3 ครั้ง)"
     }
    ],
-   "tier": "A",
+   "tier": "B",
    "proWinRate": 50.9,
    "proPickRate": 9.0,
    "proBanRate": 10.8
@@ -8380,7 +8370,7 @@
      "desc": "Wisp ยิงระเบิดถล่มพื้นที่เป้าหมาย 6 ครั้ง โดยแต่ละครั้งจะสร้างความเสียหายกายภาพ และสกิลนี้สามารถติดคริติคอลได้ แต่จะสร้างความเสียหายเพิ่มขึ้นเพียง 50% (สกิลนี้จะใช้งานต่อเนื่องได้สูงสุด 3 วิ และหากขยับระหว่างใช้สกิลหลังจาก 0.6 วิ จะทำให้สกิลหยุดทำงาน)"
     }
    ],
-   "tier": "C",
+   "tier": "B",
    "proWinRate": 53.6,
    "proPickRate": 19.1,
    "proBanRate": 3.1
@@ -8452,7 +8442,7 @@
      "desc": "Wonder Woman ฟาดแส้ Lasso of Truth ใส่ฮีโร่ศัตรู หากพลังชีวิตเป้าหมายสูงกว่า 50% เธอจะดึงตัวเองเข้าหาเป้าหมาย สร้างความเสียหายกายภาพแต่ถ้าหากพลังชีวิตเป้าหมายน้อยกว่า 50% เธอจะดึงเป้าหมายเข้ามาแทน สร้างความเสียหายกายภาพ(หากสกิลนี้โดนฮีโร่ศัตรู คูลดาวน์จะลดลง 3 วิ)"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.9,
    "proBanRate": 0.0
   },
@@ -8470,6 +8460,11 @@
    "tags": [
     "mobile",
     "burst"
+   ],
+   "patchStatus": "Adjusted",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "God of War enhanced normal attack 340 to 508 (+1.0AD) changed to a flat 450 (+1.0AD)."
    ],
    "strengths": [
     "คริฟรี 15% จาก Equal of Heaven ทำให้พีคเร็วขึ้นเป็นรอบไอเทมเต็มๆ ตั้งแต่ต้นเกม",
@@ -8525,7 +8520,7 @@
      "desc": "Wukong ควงกระบองของเขาใส่ศัตรูรอบๆ และทำให้ลอยขึ้น สร้างความเสียหายกายภาพพร้อมกับติดสตัน 1 วิ หากใช้งานสกิลนี้ซ้ำอีกภายใน 5 วิ จะสามารถหายตัว และวิ่งเร็วขึ้น 40% เป็นเวลา 1 วิ"
     }
    ],
-   "tier": "B",
+   "tier": "C",
    "proPickRate": 0.3,
    "proBanRate": 0.0
   },
@@ -8668,7 +8663,7 @@
      "desc": "Y'bneth เข้าสู่โหมดปราการ โดยเขาจะกางวงเวทลดความเร็วศัตรูทั้งหมดลง 60% พร้อมกับยิงเมล็ดพันธุ์ไปยังจุดที่กําหนดสร้างความเสียหายกายภาพ 60 (+1% HP สูงสุด) (หากโจมตีโดนศัตรูจะฟื้นฟู HP 2%) พร้อมกับทําให้ศัตรติดสตัน 1วิ หากโดนโจมตีเกิน 8 ครั้ง นอกจากนี้ YTbneth จะได้รับเกราะ 20% HP สูงสุด ทันทีที่ใช้สกิลนี้"
     }
    ],
-   "tier": "S+",
+   "tier": "A",
    "proWinRate": 52.5,
    "proPickRate": 30.2,
    "proBanRate": 30.5
@@ -8740,7 +8735,7 @@
      "desc": "Yan พุ่งไปด้านหน้าเป็นเส้นโค้ง (ระหว่างนี้จะ ไม่ตกเป็นเป้าหมาย) สร้างความเสียหายแก่ศัตรูที่พุ่งผ่าน: บัฟการโจมตีปกติ: พุ่งโจมตีศัตรู สร้างโบนัสความเสียหายพร้อมใช้สกิล 2 ที่มี"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 1.5,
    "proBanRate": 0.0
   },
@@ -8811,7 +8806,7 @@
      "desc": "Yena รวมดาบเข้าด้วยกัน พร้อมกับฟันกวาดไปรอบตัว สร้างความเสียหายกายภาน 200 (+110% AD) จากนั้นพลังโจมตีของเธอจะเพิ่มขึ้น 60 เป็นเวลา 5 วิ หลังจากใช้สกิลนี้ ชุดสกิลของเธอทั้งหมดจะถูกเปลี่ยนไป"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proWinRate": 51.0,
    "proPickRate": 17.4,
    "proBanRate": 2.9
@@ -8827,13 +8822,6 @@
    "damage": "PHYSICAL",
    "tags": [
     "poke"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Fierce Shot damage to heroes: 2% max HP to 28~56 (+1.5% max HP).",
-    "Explosive Arrow now grants vision of the target.",
-    "Hundred Barrage reveals vision along its path and on targets hit."
    ],
    "strengths": [
     "รูทจาก Explosive Arrow ทำงานได้เองไม่ต้องมีซัพ ลงโทษเลนสายเคลื่อนที่",
@@ -9317,7 +9305,7 @@
      "desc": "Zip กลิ้งไปยังทิศที่กำหนด เป็นเวลา 6 วิ ระหว่างนั้น Zip จะป้องกันสถานะ พร้อมสร้างความเสียหายเวทและทำให้ศัตรูที่ถูกกลิ้งผ่านลอยขึ้น 1 วิ ศัตรูที่อยู่สุดทางจะวิ่งช้าลง {2}% เป็นเวลา 3 วิ (หากกลิ้งไปชนสิ่งกีดขวาง Zip จะเด้งไปทางอื่น และความเร็วเพิ่มขึ้น) สามารถกดใช้อีกครั้งเพื่อยกเลิกสกิล และสกิลจะนับคูลดาวน์ตามระยะเวลาที่ใช้ไป"
     }
    ],
-   "tier": "A",
+   "tier": "S",
    "proPickRate": 0.9,
    "proBanRate": 0.2
   },
