@@ -45,18 +45,10 @@ object HeroIconCache {
         meta = loadMeta()
         cdnUrlMap = loadCdnUrls(context)
 
-        // ล้าง cache ถ้า iconVersion ใน assets เปลี่ยน
-        val cacheVerFile = File(context.filesDir, "icon_cache_version")
-        val assetVer = try {
-            val json = context.assets.open("heroes.json").bufferedReader().use { it.readText() }
-            org.json.JSONObject(json).optString("iconVersion", "1")
-        } catch (e: Exception) { "1" }
-        val cachedVer = if (cacheVerFile.exists()) cacheVerFile.readText().trim() else ""
-        if (cachedVer != assetVer) {
-            clearAutoCache()
-            cacheVerFile.writeText(assetVer)
-            Log.d(TAG, "Cache cleared — iconVersion $assetVer")
-        }
+        // ล้าง cache ทุกไฟล์ที่ไม่ใช่ custom ทุกครั้งที่ init
+        // เพื่อให้โหลดรูปใหม่จาก GitHub Releases เสมอ
+        clearAutoCache()
+        Log.d(TAG, "Auto cache cleared on init")
 
         pruneOrphans(knownHeroIds)
         initialized = true
