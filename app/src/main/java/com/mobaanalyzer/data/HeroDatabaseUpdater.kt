@@ -13,7 +13,7 @@ object HeroDatabaseUpdater {
 
     private const val TAG = "HeroDatabaseUpdater"
     private const val HEROES_URL =
-        "https://github.com/tanakorn1680/Raov-guide/releases/latest/download/heroes.json"
+        "https://github.com/tanakorn1680/Hero-Data/releases/latest/download/heroes.json"
     private const val LOCAL_FILE = "heroes.json"
     private const val CACHE_VER_FILE = "icon_cache_version"
     private const val CONNECT_TIMEOUT = 8_000

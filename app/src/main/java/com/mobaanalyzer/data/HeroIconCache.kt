@@ -23,7 +23,7 @@ object HeroIconCache {
     private const val CACHE_DIR = "hero_icons"
     private const val META_FILE = "meta.json"
     private const val GITHUB_BASE =
-        "https://github.com/tanakorn1680/Raov-guide/releases/latest/download"
+        "https://github.com/tanakorn1680/Hero-Data/releases/latest/download"
     private const val CONNECT_TIMEOUT = 8_000
     private const val READ_TIMEOUT = 12_000
 
