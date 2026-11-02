@@ -725,6 +725,12 @@
     "tanky",
     "mobile"
    ],
+   "patchStatus": "Nerfed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Spin Slash attack speed: 20% (+4%/Lv) to 15% (+3%/Lv).",
+    "Spin Slash base damage: 300 (+60/Lv, +1.1AD) to 275 (+55/Lv, +1.0AD)."
+   ],
    "strengths": [
     "Martial Soul + Dire Blow ให้เลเยอร์ความอึดในตัวสองชั้นแยกกัน",
     "Fearless Charge เจาะเกราะ 30% เป็นเวลา 4 วินาที ได้โดยไม่ต้องบิลด์ AD เต็มสาย",
@@ -1119,23 +1125,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Icon",
-     "desc": "Name"
+     "name": "Sand's Gift",
+     "desc": "Every 6 seconds, Bijan strengthens his next basic attack, dealing physical damage and healing himself. When receiving physical damage or true damage or hitting a target, Bijan will gain additional armor."
     },
     {
      "slot": "skill1",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/c/c7/Bijan_passive_%281%29_%281%29.jpg/revision/latest?cb=20240125143633)",
-     "desc": "Sand's Gift"
+     "name": "Sand Strike",
+     "desc": "Dash forward and swing your mace down on the target, dealing damage and creating a formation that knocks the target up."
     },
     {
      "slot": "skill2",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/1/15/Bijan_s1_%281%29.jpg/revision/latest?cb=20240125143952)",
-     "desc": "Sand Strike"
+     "name": "Sands of Time",
+     "desc": "Dashes forward, dealing damage and slowing the target, and also uses a horizontal sweep 3 times."
     },
     {
      "slot": "ultimate",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/c/c1/Bijan_s2_%281%29.jpg/revision/latest?cb=20240125144404)",
-     "desc": "Sands of Time"
+     "name": "Sands of Victory",
+     "desc": "Summon the sand beast to control it in the specified direction and receive immunity from control. When hitting terrain, an enemy champion or talent activating this move, Bijan will stop, deal physical damage, knock up the enemy and reduce their armor. Bijan can carry 1 teammate when using this move."
     }
    ],
    "tier": "S",
@@ -1262,23 +1268,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Icon",
-     "desc": "Name"
+     "name": "Fearless Chariot",
+     "desc": "Charges up when Basic Attacks and unenhanced skills hit. Charged skills gain extra effects. When charged to at least 1 bars, Basic Attacks recover Health on hit."
     },
     {
      "slot": "skill1",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/5/56/Bir_pass.jpg/revision/latest?cb=20250109150720)",
-     "desc": "Fearless Chariot"
+     "name": "Electrifying Charge",
+     "desc": "Swings his weapon in the target direction, dealing damage and recovering Health with every hit."
     },
     {
      "slot": "skill2",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/3/3c/Bir_s1.jpeg/revision/latest?cb=20250109150733)",
-     "desc": "Electrifying Charge"
+     "name": "Storm Strike",
+     "desc": "Dashes in the target direction, gaining an enhanced Basic Attack that deals damage and slows targets."
     },
     {
      "slot": "ultimate",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/6/64/Bir_s2.jpg/revision/latest?cb=20250109150751)",
-     "desc": "Storm Strike"
+     "name": "Force Field Suppression",
+     "desc": "Damages and slows nearby enemies while gaining a shield."
     }
    ],
    "tier": "A",
@@ -1402,23 +1408,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Bonnie Smack!",
-     "desc": "Bonnie hurls her yellow rabbit to a target location, dealing 225-450 (+45%of AP) magic damage to nearby enemies. The yellow rabbit remains on the ground for 8s, allowing her to reveal enemies within its electromagnetic field. When all of Bonnie's damage lands on the rabbit, it triggers Electromagnetic Blast. Can be stored up to 2 times (9s-7s) (Affected by cooldown reduction).Electromagnetic Blast: Deals 325-700 (+50%of AP) magic damage to nearby enemies."
+     "name": "Don't Test Me",
+     "desc": "If Bonnie's skill 1, Electromagnetic Blast, strikes an enemy, she will gain movement speed."
     },
     {
      "slot": "skill1",
-     "name": "Gina Thwack!",
-     "desc": "Bonnie controls her red rabbit to attack a specific enemy, dealing 100-170 (+20%of AP) magic damage 3 times to the area and immobolizes them for 1,5s."
+     "name": "Bonnie Smack!",
+     "desc": "Bonnie hurls her yellow rabbit to a target location, dealing magic damage to nearby enemies. The yellow rabbit remains on the ground for a period, allowing her to reveal enemies within its electromagnetic field. When all of Bonnie's damage lands on the rabbit, it triggers Electromagnetic Blast."
     },
     {
      "slot": "skill2",
-     "name": "Allan Kaboom!",
-     "desc": "Bonnie's purple rabbit lands in a target location, pulling in nearby enemies within 2s and dealing 280-520 (+60% ability power) magic damage. Then it explodes dealing 450-800 (+100%of AP) magic damage and stunning nearby enemies for 1.5s."
+     "name": "Gina Thwack!",
+     "desc": "Bonnie deals damage to the target and immobilizes them."
     },
     {
      "slot": "ultimate",
-     "name": "Don't Test Me",
-     "desc": "If Bonnie's skill 1 Electromagnetic Blast strikes an enemy, she will gain 60% movement speed that decreases over 1,5s."
+     "name": "Allan Kaboom!",
+     "desc": "Bonnie's purple rabbit lands in a target location, pulling in nearby enemies and dealing magic damage. Then, it explodes, dealing magic damage and stunning nearby enemies."
     }
    ],
    "tier": "S"
@@ -1541,23 +1547,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Redeploy",
-     "desc": "Brunhilda gains 80% movement speed that diminishes over 2s. Allows Entrenchment to be canceled immediately.Increases 40-60 attack damage"
+     "name": "Ballistics",
+     "desc": "เมื่อ Celica โจมตีปกติโดนศัตรู จะทําให้โอกาสคริเพิ่มขึ้น 3% และพลังโจมตีเพิ่มขึ้น 8 หน่วย เป็นเวลา 2วิ (สูงสุด 5 ครั้ง)"
     },
     {
      "slot": "skill1",
-     "name": "Sentry",
-     "desc": "Brunhilda throws a trap at the target location (when located in the bush, friendly units gain vision around it). Enemies who touch it take 200-400 (+50%of AD) physical damage, and enemy heroes receive an additional 30% movement speed reduction, 15%-30% armor reduction and are revealed for 2s. Brunhilda gains a shield that absorbs 200-400 (+50%of AD) damage for 3s. Up to 2 mines may be active at the same time."
+     "name": "Redeploy",
+     "desc": "50 Celica ยกเลิกการตั้งป้อมทันที และวิ่งเร็วขึ้น 80% เป็นเวลา 2 วิ สกิลติดตัว: พลังโจมตีเพิ่มขึ้น 60 หน่วย"
     },
     {
      "slot": "skill2",
-     "name": "Entrench",
-     "desc": "Brunhilda becomes entrenched for 15s, during which she is unable to move but gains 240-360 armor and magic defense. Her normal attacks deal 350-550 (+100%of AD) physical damage to enemies at the center of the target area (-40% to enemies on the edge) for a maximum of 7 times.Recast to cancel entrenchment"
+     "name": "Sentry",
+     "desc": "ควบคุม 2 9erry Menace ใช้มานา: 80 Celica ปา Sentry ไปยังจุดที่กําหนด สร้างความเสียหายกายภาพ 200 (+50% AD) แก่ศัตรูที่เดินมาเหยียบ พร้อมกับทําให้วิ่งช้าลง 30% และลดเกราะลง 15% เป็นเวลา 2 3 ส่วน Celica จะได้รับโล่ดูดซับความเสียหาย 200 (+50% AD) หน่วย สามารถวาง Sentry ได้พร้อมกันสูงสุด 2 ชิ้น"
     },
     {
      "slot": "ultimate",
-     "name": "Ballistics",
-     "desc": "When Brunhilda's normal attacks hit an enemy, her crit chance increases by 3%, and her physical damage increases by 8 for 3s (up to 5 stacks).(No effect against normal wildlings)"
+     "name": "Entrench",
+     "desc": "Celica ตั้งป้อมเป็นเวลา 15 วิ ระหว่างนั้นเธอจะไม่สามารถขยับตัวได้ แต่จะได้รับเกราะ และเกราะเวท + 180 นอกจากนี้การโจมตีปกติของเธอจะสร้าง ความเสียหายกายภาพ 350 (+100% AD) (ลดลง 40% หากศัตรูอยู่ขอบวง) โดยกระสุนขณะตั้งป้อมจะมีจํานวน 7 นัด (สามารถกดสกิลซ้ําอีกครั้งเพื่อยกเลิกการตั้งป้อม)"
     }
    ],
    "tier": "A"
@@ -1718,62 +1724,7 @@
    "tags": [
     "burst",
     "mobile"
-   ],
-   "strengths": [
-    "Entrench ยิงโดนแรง 350 (+100% AD) ต่อนัด ตลอดแมกกาซีน 7 นัด",
-    "Sentry เจาะเกราะ 15% ผสานกับ Muramasa กลายเป็นการลอกเกราะสองชั้น",
-    "พาสซีฟของ Redeploy ให้ AD เพิ่ม 60 ทำให้ออโต้แลกหมัดช่วงต้นเกมได้เปรียบตลอด",
-    "Sentry มีสองชาร์จ คุมสองมุมเข้าปะทะได้พร้อมกัน"
-   ],
-   "weaknesses": [
-    "Entrench ล็อกตัวเองอยู่กับที่ ใครมีสกิลเข้าใกล้ก็เอาชีวิตไปฟรีๆ",
-    "ไม่มีซีซีแรงๆ เลยต้องพึ่งทีมพีลให้ล้วนๆ ตอนใช้ Entrench",
-    "7 นัดหมดเร็วมากในตีทีม เหลือแต่คูลดาวน์ยาวๆ ไม่ได้อะไรคืนมา",
-    "Ballistics รีเซ็ตถ้าไม่โดนเป้าใน 2 วินาที ขยับตัวแบบจำใจทีเดียวสตากที่สั่งสมมาหายหมด"
-   ],
-   "weakTo": [
-    "murad",
-    "nakroth",
-    "quillen",
-    "butterfly"
-   ],
-   "counters": [
-    "tel-annas",
-    "violet",
-    "yorn",
-    "laville",
-    "elsu",
-    "lindis"
-   ],
-   "synergies": [
-    "baldum",
-    "arduin",
-    "annette",
-    "gildur"
-   ],
-   "skills": [
-    {
-     "slot": "passive",
-     "name": "Ballistics",
-     "desc": "เมื่อ Celica โจมตีปกติโดนศัตรู จะทําให้โอกาสคริเพิ่มขึ้น 3% และพลังโจมตีเพิ่มขึ้น 8 หน่วย เป็นเวลา 2วิ (สูงสุด 5 ครั้ง)"
-    },
-    {
-     "slot": "skill1",
-     "name": "Redeploy",
-     "desc": "50 Celica ยกเลิกการตั้งป้อมทันที และวิ่งเร็วขึ้น 80% เป็นเวลา 2 วิ สกิลติดตัว: พลังโจมตีเพิ่มขึ้น 60 หน่วย"
-    },
-    {
-     "slot": "skill2",
-     "name": "Sentry",
-     "desc": "ควบคุม 2 9erry Menace ใช้มานา: 80 Celica ปา Sentry ไปยังจุดที่กําหนด สร้างความเสียหายกายภาพ 200 (+50% AD) แก่ศัตรูที่เดินมาเหยียบ พร้อมกับทําให้วิ่งช้าลง 30% และลดเกราะลง 15% เป็นเวลา 2 3 ส่วน Celica จะได้รับโล่ดูดซับความเสียหาย 200 (+50% AD) หน่วย สามารถวาง Sentry ได้พร้อมกันสูงสุด 2 ชิ้น"
-    },
-    {
-     "slot": "ultimate",
-     "name": "Entrench",
-     "desc": "Celica ตั้งป้อมเป็นเวลา 15 วิ ระหว่างนั้นเธอจะไม่สามารถขยับตัวได้ แต่จะได้รับเกราะ และเกราะเวท + 180 นอกจากนี้การโจมตีปกติของเธอจะสร้าง ความเสียหายกายภาพ 350 (+100% AD) (ลดลง 40% หากศัตรูอยู่ขอบวง) โดยกระสุนขณะตั้งป้อมจะมีจํานวน 7 นัด (สามารถกดสกิลซ้ําอีกครั้งเพื่อยกเลิกการตั้งป้อม)"
-    }
-   ],
-   "tier": "B"
+   ]
   },
   {
    "id": "charlotte",
@@ -2232,13 +2183,6 @@
    "tags": [
     "poke",
     "cc"
-   ],
-   "patchStatus": "Reworked",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Genesis Blast split off into a standalone Skill 4: 500 + 250/Lv + 0.80MP, 50 (-5/Lv)s cooldown, 90 (+5/Lv) mana.",
-    "Fallen Star drops immediately when cast inside the inner circle of Skill 1.",
-    "Fallen Star cooldown 11 (-0.6/Lv)s to 12.5 (-0.5/Lv)s."
    ],
    "strengths": [
     "Arcane Body แปลงมานาเป็น HP ทำให้เบิร์สต์ ดิแรก ยากมาก",
@@ -2749,6 +2693,14 @@
     "heal",
     "cc"
    ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Greeting of Leaves cooldown: 8 (-0.2/Lv) s to 8 (-0.3/Lv) s.",
+    "Greeting of Leaves base damage: 350 (+70/Lv, +0.8MP, +0.45AD) to 450 (+90/Lv, +1.05MP, +0.6AD).",
+    "Touch damage: 125 (+25/Lv, +0.3MP, +0.2AD) to 150 (+30/Lv, +0.35MP, +0.2AD).",
+    "เธออยู่เทียร์ A ด้วยเรตชนะ 33.3% และเรตพิก 1.1% บนเซิร์ฟเวอร์ไทย พูลผู้เล่นน้อยแปลว่าพื้นโหดแต่คนเล่นเฉพาะทางดันเพดานได้สูงจริง"
+   ],
    "strengths": [
     "ระยะไกลทำให้เธออยู่นอกโซนโดนเก็บในเลนมังกร",
     "Lethal Barrage คือดาเมจพุ่งมหาศาลใส่เป้าที่โดนล็อกอยู่",
@@ -2820,11 +2772,6 @@
     "tanky",
     "cc"
    ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Blood Drinker stacks now decay one by one, each subsequent stack lasting 1 second."
-   ],
    "strengths": [
     "Blood Drinker ตอบแทนการทุ่มสุดตัว แลกยิ่งนานยิ่งดูดเลือดเยอะ",
     "Boneshaver ที่เสริมพลังตอน 5 สแต็กพลิกการแลกที่กำลังแพ้ให้เป็นการเก็บ",
@@ -2891,10 +2838,44 @@
    "lanes": [],
    "damage": "PHYSICAL",
    "tags": [],
-   "patchStatus": "Reworked",
+   "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "New hero released: Abyssal mage who clusters enemies with Hand of Mastery, then shields herself while the Essence Devourer shreds magic defense in area fights."
+    "Dark Pulse base damage: 325 (+65/Lv, +0.65MP) to 300 (+60/Lv, +0.6MP).",
+    "Essence Blitz base damage: 36 (+18/Lv, +0.07MP) to 30 (+15/Lv, +0.06MP).",
+    "Essence Blitz cooldown: 50 (-5/Lv) s to 55 (-5/Lv) s."
+   ],
+   "strengths": [
+    "Hand of Mastery ลากทั้งไฟต์มารวมในโซนเด้งจุดเดียวได้",
+    "Essence Blitz ให้โล่ทุกครั้งที่ Devourer ตีโดน เลยรอดจากการโดนดำดิ่งเข้ามาล้วง",
+    "อัลติเมทลดเกราะเวทแบบหนัก ละลายแทงค์เลือดหนาได้สบาย",
+    "สกิลเซ็ตเรียบง่าย คอมโบเดียวใช้ได้ทั้งตอนยืนเลน ไฟต์ย่อย และตีทีม"
+   ],
+   "weaknesses": [
+    "ระยะอัลติสั้น ต้องเดินเข้าไปใกล้ไฟต์",
+    "Hand of Mastery มีดีเลย์ ฮีโร่ที่คล่องตัวเดินหนีออกได้ทัน",
+    "ก่อนเลเวล 4 คือบาง แถมไม่มีสกิลพุ่งหรือวาร์ปเป็นของตัวเอง",
+    "ฮีโร่ใหม่เอี่ยม ข้อมูลแรงค์กับความรู้เรื่องการเจอตัวยังน้อยอยู่"
+   ],
+   "weakTo": [
+    "nakroth",
+    "murad",
+    "kriknak",
+    "keera"
+   ],
+   "counters": [
+    "toro",
+    "arum",
+    "lumburr",
+    "aleister",
+    "gildur",
+    "diao-chan"
+   ],
+   "synergies": [
+    "rouie",
+    "grakk",
+    "thane",
+    "baldum"
    ],
    "skills": [
     {
@@ -3078,11 +3059,6 @@
     "burst",
     "mobile"
    ],
-   "patchStatus": "Nerfed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Archer form Arrowstorm base damage 70 (+35/Lv) (+0.28AD) to 64 (+32/Lv) (+0.26AD)."
-   ],
    "strengths": [
     "ดาเมจฟิสิคัลผสมเวทบีบให้ฝั่งตรงข้ามต้องจัดของป้องกันแบบไฮบริด เปลืองเงินสุดๆ",
     "หมุนพาสซีฟดีๆ ชนะเทรดสั้นๆ กับมาร์คแมนสายฟิสิคัลล้วนได้สบาย",
@@ -3134,13 +3110,6 @@
    "tags": [
     "tanky",
     "cc"
-   ],
-   "patchStatus": "Nerfed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Extravagant base damage 380 (+76/Lv) (+0.55MP) to 350 (+70/Lv) (+0.5MP).",
-    "Extravagant damage over time 30 (+6/Lv) to 35 (+7/Lv).",
-    "Indulgence cooldown 42 (-7/Lv)s to 45 (-5/Lv)s."
    ],
    "strengths": [
     "การผลักของ The Touch เป็นพีลที่ไม่มีคูลดาวน์ ยิงทุก 4 ออโต้",
@@ -3356,6 +3325,12 @@
    "tags": [
     "mobile",
     "burst"
+   ],
+   "patchStatus": "Adjusted",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Blood of the Dragon true damage: 40 (+0.25AD) to 45 (+0.23AD).",
+    "Shuriken Toss base damage: 105 (+21/Lv, +0.2AD) to 110 (+22/Lv, +0.18AD)."
    ],
    "strengths": [
     "Blood of the Dragon เด้งใส่หลายตัวพร้อมกัน สแต็กทรูดาเมจใส่ได้ทั้งกลุ่มในทีเดียว",
@@ -3891,23 +3866,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Battering Beads",
-     "desc": "Jinnar uses his spirit orbs to attack up to 2 nearby enemies, dealing x (+x) magic damage. With each hit, the spirit orb bounces to nearby enemies up to 2 times. If an enemy is already hit once, subsequent hits only deal 30% damage."
+     "name": "Samsara",
+     "desc": "หลังจากใช้ลูกประคำโจมตีครบ 4 ครั้ง (โจมตีปกติและใช้สกิล) การโจมตีปกติครั้งต่อไป จะยิงลูกประคำเจาะเกราะ สร้างความเสียหายเวท"
     },
     {
      "slot": "skill1",
-     "name": "Nirvana",
-     "desc": "Jinnar evokes the power of his spirit orbs to attack nearby enemies 10 times over 5 seconds, dealing 170 (+0) magic damage per hit. When using this ability, Jinnar gains 15% damage reduction plus 5% for each nearby hero for 5 seconds, and 80% movement bonus that gradually weakens over 2.5 seconds."
+     "name": "Battering Beads",
+     "desc": "Jinna ใช้ลูกประคำโจมตีแก่ศัตรู 2 คนรอบตัว สร้างความเสียหายเวทโดยแต่ละครั้งที่ลูกประคำโจมตีจะชิ่งใส่ศัตรูรอบๆ 2 ครั้ง แต่ถ้าหากศัตรูถูกชิ่งใส่หลายครั้ง จะสร้างความเสียหายเพียง 30% หลังจากครั้งแรกที่โดนโจมตี"
     },
     {
      "slot": "skill2",
-     "name": "Samsara",
-     "desc": "After Jinnar uses his spirit orbs four times (normal attacks or abilities), the next normal attack will fire a spirit orb with a penetrating effect to deal x (+x) magic damage."
+     "name": "Sutra of Pain",
+     "desc": "Jinna ใช้ลูกประคำระเบิดพลัง สร้างความเสียหายเวทแก่ศัตรูรอบๆ พร้อมกับลดความเร็วเคลื่อนที่เป็นเวลา 2 วินาที"
     },
     {
      "slot": "ultimate",
-     "name": "Sutra of Pain",
-     "desc": "Jinnar creates a spirit orb formation and deals x (+x) magic damage to nearby enemies, slowing their movement speed by x% for 2 seconds."
+     "name": "Nirvana",
+     "desc": "Jinna สั่งการลูกประคำให้หมุนรอบตัวเขาอย่างบ้าคลั่ง (สร้างความเสียหายทุก 0.5 วินาที เป็นจำนวน 10 ครั้ง) การโจมตีแต่ละครั้งสร้างความเสียหายเวทหลังจากใช้สกิล ความเสียหายที่ได้รับจากศัตรูจะลดลง 15% เป็นเวลา 5 วินาที และเพิ่มความเร็วเคลื่อนที่ให้กับตนเอง 80% เป็นเวลา 2.5 วินาที"
     }
    ],
    "tier": "C",
@@ -4066,6 +4041,13 @@
     "burst",
     "mobile"
    ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Umbra Dream cooldown: 6 (-0.4/Lv) s to 5 (-0.2/Lv) s.",
+    "Triangle Maze path damage: 75 (+15/Lv, +0.15MP) to 100 (+20/Lv, +0.2MP).",
+    "Triangle Maze triangle damage: 400 (+40/Lv, +0.6MP) to 400 (+80/Lv, +0.8MP)."
+   ],
    "strengths": [
     "ล็อก 3 วินาทีของ Umbra Dream ติดแครี่ทุกตัว ต่อให้มีแดช (dash) ก็หนีไม่พ้น",
     "Fading Phantom รีเซ็ตคูลดาวน์ Q กับ W ทำให้คีร่าปล่อยคอมโบเบิร์สต์เต็มๆได้สองรอบ",
@@ -4206,11 +4188,6 @@
    "tags": [
     "burst",
     "cc"
-   ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Terrifying Plague base damage 300 (+50/Lv) (+1.4 Bonus AD) to 325 (+65/Lv) (+1.5 Bonus AD)."
    ],
    "strengths": [
     "Terrifying Plague ทำดาเมจ 10% ของเลือดสูงสุด ลงโทษแทงค์ที่สแตกเลือด",
@@ -6298,13 +6275,6 @@
     "burst",
     "mobile"
    ],
-   "patchStatus": "Buffed",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "Rising Dragon Fist cooldown 10 (-0.8/Lv)s to 8 (-0.3/Lv)s.",
-    "Volatile Fist base damage 500 (+60/Lv) (+0.8MP) to 450 (+90/Lv) (+0.9MP).",
-    "Volatile Fist magic defense reduction 50 (+30/Lv) to 100 (+20/Lv)."
-   ],
    "strengths": [
     "ซีซีจาก Q + Odin's Fist มาเป็นสองจังหวะแยกกัน Purify เลยลบทั้งคู่ไม่ได้",
     "สกิลโดนทุกครั้งคืนพลังงาน 25 คอมโบเต็มหนึ่งชุดแทบจะจ่ายค่าชุดถัดไปได้เลย",
@@ -6744,6 +6714,11 @@
    "tags": [
     "heal"
    ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Living Water (passive) now restores extra HP equal to 4% of bonus HP."
+   ],
    "strengths": [
     "Living Water ให้การยืนระยะฟรีทุกครั้งที่ใช้สกิล ไม่ต้องซื้อไอเทมฮีลเลย",
     "Q ต่อออโต้บัฟลดคูลดาวน์ ทำให้ Wall of Water ยิงต่อกันได้เร็ว",
@@ -7064,23 +7039,23 @@
    "skills": [
     {
      "slot": "passive",
-     "name": "Icon",
-     "desc": "Name"
+     "name": "Crime Spree",
+     "desc": "Stuart normal attack, first skill and ultimate skill will gain energy after hitting the enemy. The upper limit is 4 stacks. When the energy level is full, he will enter Enhanced State."
     },
     {
      "slot": "skill1",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/5/58/Stut_noi_tai.png/revision/latest?cb=20250115161951)",
-     "desc": "Crime"
+     "name": "Death Bloom",
+     "desc": "Stuart launches projectile, causing physical damage to enemies in the flight path."
     },
     {
      "slot": "skill2",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/7/73/Stut_c1.png/revision/latest?cb=20250115162009)",
-     "desc": "Death Bloom"
+     "name": "Eyes of Fervor",
+     "desc": "Stuart removes all slow effects on him and gains physical damage immunity and bonus movement speed for 2s."
     },
     {
      "slot": "ultimate",
-     "name": "[](https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/5/5e/Stut_c2.png/revision/latest?cb=20250115162019)",
-     "desc": "Eyes of Zealot"
+     "name": "Last Breath",
+     "desc": "Stuart jumps in front of the enemy and places a bomb, causing a brief stun and slowdown and causing damage."
     }
    ],
    "tier": "S",
@@ -7292,6 +7267,11 @@
    "tags": [
     "poke",
     "cc"
+   ],
+   "patchStatus": "Nerfed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Shadow Devourer enhanced attack damage: 200 to 396 (+0.3 Bonus AD) to 182 to 364 (+0.28 Bonus AD)."
    ],
    "tier": "C",
    "proPickRate": 1.2,
@@ -8461,11 +8441,6 @@
     "mobile",
     "burst"
    ],
-   "patchStatus": "Adjusted",
-   "patchVersion": "1.64",
-   "patchChanges": [
-    "God of War enhanced normal attack 340 to 508 (+1.0AD) changed to a flat 450 (+1.0AD)."
-   ],
    "strengths": [
     "คริฟรี 15% จาก Equal of Heaven ทำให้พีคเร็วขึ้นเป็นรอบไอเทมเต็มๆ ตั้งแต่ต้นเกม",
     "Shadow Clone + Great Sage + Wishing Staff ทำงานได้เองไม่ต้องรอเพื่อนเซ็ตอัปเลย",
@@ -8536,6 +8511,12 @@
    "tags": [
     "tanky",
     "heal"
+   ],
+   "patchStatus": "Buffed",
+   "patchVersion": "1.64",
+   "patchChanges": [
+    "Divine Protection shield: 350 (+110/Lv, +0.4MP, +0.04 Max HP) to 500 (+100/Lv, +0.5MP, +0.05 Max HP).",
+    "Divine Protection damage: 450 (+110/Lv, +0.4MP, +0.04 Max HP) to 500 (+100/Lv, +0.5MP, +0.05 Max HP)."
    ],
    "strengths": [
     "Q กับ R เป็นโล่สองชั้นอิสระ ศัตรูตีแตกทั้งคู่ไม่ได้",
