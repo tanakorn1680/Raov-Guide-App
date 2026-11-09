@@ -728,8 +728,8 @@
    "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Spin Slash attack speed: 20% (+4%/Lv) to 15% (+3%/Lv).",
-    "Spin Slash base damage: 300 (+60/Lv, +1.1AD) to 275 (+55/Lv, +1.0AD)."
+    "Spin Slash attack speed 20% (+4%/level) to 15% (+3%/level).",
+    "Spin Slash base damage 300 (+60/level) (+1.1 AD) to 275 (+55/level) (+1.0 AD)."
    ],
    "strengths": [
     "Martial Soul + Dire Blow ให้เลเยอร์ความอึดในตัวสองชั้นแยกกัน",
@@ -2696,9 +2696,9 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Greeting of Leaves cooldown: 8 (-0.2/Lv) s to 8 (-0.3/Lv) s.",
-    "Greeting of Leaves base damage: 350 (+70/Lv, +0.8MP, +0.45AD) to 450 (+90/Lv, +1.05MP, +0.6AD).",
-    "Touch damage: 125 (+25/Lv, +0.3MP, +0.2AD) to 150 (+30/Lv, +0.35MP, +0.2AD).",
+    "Greeting of Leaves base damage 350 (+70/level) (+0.8 MP) (+0.45 AD) to 450 (+90/level) (+1.05 MP) (+0.6 AD).",
+    "Touch damage 125 (+25/level) (+0.3 MP) to 150 (+30/level) (+0.35 MP).",
+    "Cooldown 8s (-0.2/level) to 8s (-0.3/level).",
     "เธออยู่เทียร์ A ด้วยเรตชนะ 33.3% และเรตพิก 1.1% บนเซิร์ฟเวอร์ไทย พูลผู้เล่นน้อยแปลว่าพื้นโหดแต่คนเล่นเฉพาะทางดันเพดานได้สูงจริง"
    ],
    "strengths": [
@@ -2841,9 +2841,9 @@
    "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Dark Pulse base damage: 325 (+65/Lv, +0.65MP) to 300 (+60/Lv, +0.6MP).",
-    "Essence Blitz base damage: 36 (+18/Lv, +0.07MP) to 30 (+15/Lv, +0.06MP).",
-    "Essence Blitz cooldown: 50 (-5/Lv) s to 55 (-5/Lv) s."
+    "Dark Pulse base damage 325 (+65/level) (+0.65 MP) to 300 (+60/level) (+0.6 MP).",
+    "Essence Blitz base damage 36 (+18/level) (+0.07 MP) to 30 (+15/level) (+0.06 MP).",
+    "Essence Blitz cooldown 50s (-5/level) to 55s (-5/level)."
    ],
    "strengths": [
     "Hand of Mastery ลากทั้งไฟต์มารวมในโซนเด้งจุดเดียวได้",
@@ -3329,8 +3329,8 @@
    "patchStatus": "Adjusted",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Blood of the Dragon true damage: 40 (+0.25AD) to 45 (+0.23AD).",
-    "Shuriken Toss base damage: 105 (+21/Lv, +0.2AD) to 110 (+22/Lv, +0.18AD)."
+    "Blood of the Dragon true damage 40 (+0.25 AD) to 45 (+0.23 AD).",
+    "Shuriken Toss base damage 105 (+21/level) (+0.2 AD) to 110 (+22/level) (+0.18 AD)."
    ],
    "strengths": [
     "Blood of the Dragon เด้งใส่หลายตัวพร้อมกัน สแต็กทรูดาเมจใส่ได้ทั้งกลุ่มในทีเดียว",
@@ -4044,9 +4044,9 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Umbra Dream cooldown: 6 (-0.4/Lv) s to 5 (-0.2/Lv) s.",
-    "Triangle Maze path damage: 75 (+15/Lv, +0.15MP) to 100 (+20/Lv, +0.2MP).",
-    "Triangle Maze triangle damage: 400 (+40/Lv, +0.6MP) to 400 (+80/Lv, +0.8MP)."
+    "Umbra Dream cooldown 6s (-0.4/level) to 5s (-0.2/level).",
+    "Triangle Maze path damage 75 (+15/level) (+0.15 MP) to 100 (+20/level) (+0.2 MP).",
+    "Triangle damage 400 (+40/level) (+0.6 MP) to 400 (+80/level) (+0.8 MP)."
    ],
    "strengths": [
     "ล็อก 3 วินาทีของ Umbra Dream ติดแครี่ทุกตัว ต่อให้มีแดช (dash) ก็หนีไม่พ้น",
@@ -6717,7 +6717,7 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Living Water (passive) now restores extra HP equal to 4% of bonus HP."
+    "Living Water passive now restores extra HP equal to 4% of bonus HP."
    ],
    "strengths": [
     "Living Water ให้การยืนระยะฟรีทุกครั้งที่ใช้สกิล ไม่ต้องซื้อไอเทมฮีลเลย",
@@ -7271,7 +7271,7 @@
    "patchStatus": "Nerfed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Shadow Devourer enhanced attack damage: 200 to 396 (+0.3 Bonus AD) to 182 to 364 (+0.28 Bonus AD)."
+    "Shadow Devourer enhanced attack damage 200 to 396 (+0.3 bonus AD) lowered to 182 to 364 (+0.28 bonus AD)."
    ],
    "tier": "C",
    "proPickRate": 1.2,
@@ -8515,8 +8515,8 @@
    "patchStatus": "Buffed",
    "patchVersion": "1.64",
    "patchChanges": [
-    "Divine Protection shield: 350 (+110/Lv, +0.4MP, +0.04 Max HP) to 500 (+100/Lv, +0.5MP, +0.05 Max HP).",
-    "Divine Protection damage: 450 (+110/Lv, +0.4MP, +0.04 Max HP) to 500 (+100/Lv, +0.5MP, +0.05 Max HP)."
+    "Divine Protection base shield 350 (+110/level) (+0.4 MP) (+0.04 max HP) to 500 (+100/level) (+0.5 MP) (+0.05 max HP).",
+    "Divine Protection base damage 450 (+110/level) to 500 (+100/level), same ratio increases."
    ],
    "strengths": [
     "Q กับ R เป็นโล่สองชั้นอิสระ ศัตรูตีแตกทั้งคู่ไม่ได้",
